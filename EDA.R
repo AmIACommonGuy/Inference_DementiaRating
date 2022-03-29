@@ -1,9 +1,9 @@
 ## Set pwd to the project folder
-setwd("~/Desktop/BIOS651/651FinalProject/651FP")
+setwd("~/Desktop/BIOS651/651final/Associations with Clinical Dementia Rating")
 
 ## Project choice 2
 dementia = read.csv("./dementia/mds_center9661.csv", stringsAsFactors = T)
-attributes(dementia)
+attributes(dementia)$names
 View(dementia)
 
 ## Project choice: Demantia
@@ -23,7 +23,12 @@ ct$p.value ## not independent
 ## It seems that it might be rewarding to
 ## look at the skilled vs. private housing
 
-## Can I treat Res as ordinal to do a Cochran Armatage or gamma?
+## To better illustrate the trend we might want to assume res be ordinal and use 
+## a Cochran Armatage or gamma test.
+
+## In conclusion, we should have res. type in the model. However, including all
+## levels of resident types maybe undesirable. I suggest to stratify our model into
+## private housing, assisted_living+retirement, and skilled nursing.
 
 
 

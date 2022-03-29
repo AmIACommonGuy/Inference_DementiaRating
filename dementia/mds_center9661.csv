@@ -1,0 +1,900 @@
+"NACCID","DEP","EDUC","MARISTAT","RACE","RESIDENC","RLDEM","SEX","FEVALAGE","CDR"
+"NACC000253","No",18,"Divorced","White","Private residence","Yes","Female",74,0
+"NACC001412","No",17,"Divorced","White","Private residence","No","Male",63,0
+"NACC002464","No",12,"Married","White","Skilled nursing facility/nursing home","No","Male",89,1
+"NACC002663","Yes",8,"Widowed","White","Skilled nursing facility/nursing home","No","Male",84,1
+"NACC003012","Yes",14,"Married","White","Skilled nursing facility/nursing home","Yes","Male",88,1
+"NACC007809","No",12,"Married","White","Private residence","Yes","Female",77,0
+"NACC010935","Yes",12,"Married","White","Skilled nursing facility/nursing home","Yes","Male",78,1
+"NACC011599","Yes",20,"Divorced","White","Private residence","Yes","Female",59,0
+"NACC012144","No",16,"Divorced","White","Private residence","Yes","Female",73,0.5
+"NACC015151","Yes",19,"Married","White","Private residence","No","Male",71,1
+"NACC015383","No",12,"Widowed","Non-white","Private residence","No","Female",78,0
+"NACC016741","No",14,"Widowed","Non-white","Private residence","No","Female",76,0.5
+"NACC017249","No",11,"Widowed","Non-white","Private residence","No","Female",73,0.5
+"NACC017364","No",13,"Married","White","Private residence","Yes","Female",59,0
+"NACC017455","Yes",14,"Married","White","Other","No","Male",73,1
+"NACC019399","No",22,"Married","Non-white","Private residence","No","Female",55,1
+"NACC019797","Yes",12,"Married","Non-white","Private residence","Yes","Male",86,1
+"NACC022483","Yes",16,"Widowed","Non-white","Private residence","No","Female",60,0.5
+"NACC024770","No",9,"Widowed","Non-white","Private residence","No","Male",73,0
+"NACC026263","No",10,"Married","White","Private residence","No","Female",69,1
+"NACC026438","No",12,"Never married","Non-white","Private residence","No","Female",77,1
+"NACC027373","No",14,"Divorced","Non-white","Private residence","No","Female",66,0
+"NACC028415","No",12,"Married","White","Private residence","No","Female",89,1
+"NACC029622","No",14,"Widowed","White","Private residence","Yes","Female",64,0
+"NACC033114","Yes",12,"Widowed","Non-white","Private residence","No","Female",93,1
+"NACC037605","No",12,"Married","White","Private residence","Yes","Male",80,1
+"NACC037771","Yes",16,"Married","White","Private residence","Yes","Male",78,1
+"NACC039068","Yes",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",75,1
+"NACC039815","No",18,"Married","White","Skilled nursing facility/nursing home","Yes","Male",76,1
+"NACC040019","No",18,"Married","White","Private residence","Yes","Female",70,1
+"NACC040167","No",20,"Married","White","Private residence","No","Male",65,0
+"NACC041452","No",16,"Married","White","Private residence","Yes","Male",76,0.5
+"NACC042000","Yes",13,"Divorced","White","Private residence","Yes","Male",70,0.5
+"NACC042952","No",16,"Married","White","Private residence","Yes","Female",57,0
+"NACC043962","No",16,"Never married","White","Private residence","Yes","Female",56,0
+"NACC046268","No",13,"Married","White","Private residence","Yes","Female",78,1
+"NACC046281","No",9,"Never married","Non-white","Private residence","No","Female",56,0.5
+"NACC048656","No",16,"Never married","Non-white","Private residence","No","Male",59,0
+"NACC048816","Yes",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",72,1
+"NACC049812","Yes",12,"Widowed","Non-white","Private residence","Yes","Female",63,0.5
+"NACC052610","No",11,"Widowed","Non-white","Private residence","No","Female",75,0
+"NACC053461","No",16,"Never married","White","Other","No","Female",84,1
+"NACC053532","No",18,"Married","White","Private residence","Yes","Female",69,0
+"NACC054979","No",12,"Married","White","Skilled nursing facility/nursing home","Yes","Male",80,1
+"NACC055227","No",12,"Married","White","Private residence","Yes","Male",78,1
+"NACC055356","No",12,"Divorced","White","Private residence","Yes","Male",82,1
+"NACC055581","No",12,"Married","White","Private residence","No","Male",64,0
+"NACC055813","No",8,"Married","Non-white","Private residence","No","Male",87,0.5
+"NACC055981","No",12,"Married","Non-white","Private residence","Yes","Female",63,1
+"NACC056098","No",20,"Divorced","White","Private residence","Yes","Female",71,0
+"NACC056217","Yes",12,"Divorced","White","Other","Yes","Female",72,1
+"NACC057384","No",14,"Widowed","Non-white","Private residence","Yes","Female",71,0
+"NACC057656","No",16,"Married","White","Private residence","Yes","Male",69,0.5
+"NACC058643","No",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",74,1
+"NACC060799","No",12,"Never married","Non-white","Private residence","No","Female",72,0.5
+"NACC064113","No",18,"Married","White","Private residence","Yes","Female",63,0
+"NACC065509","Yes",14,"Widowed","White","Skilled nursing facility/nursing home","No","Male",81,1
+"NACC065888","No",14,"Widowed","Non-white","Private residence","No","Female",64,0
+"NACC069303","No",14,"Never married","White","Private residence","No","Female",74,0
+"NACC072499","Yes",12,"Widowed","White","Private residence","Yes","Male",78,1
+"NACC073532","Yes",14,"Married","White","Private residence","Yes","Male",72,1
+"NACC073634","Yes",12,"Widowed","White","Skilled nursing facility/nursing home","No","Female",83,1
+"NACC073876","No",10,"Separated","Non-white","Assisted living/boarding home/adult family home","No","Male",71,1
+"NACC075750","Yes",12,"Married","White","Skilled nursing facility/nursing home","No","Male",65,1
+"NACC076708","No",12,"Divorced","White","Private residence","Yes","Female",64,0
+"NACC076973","No",16,"Widowed","Non-white","Private residence","Yes","Female",86,0.5
+"NACC077179","No",13,"Widowed","White","Private residence","No","Female",84,0
+"NACC077238","Yes",12,"Married","White","Private residence","Yes","Female",59,0
+"NACC077584","No",18,"Married","White","Private residence","Yes","Female",65,0
+"NACC078923","Yes",16,"Married","White","Private residence","No","Male",81,0.5
+"NACC079179","No",20,"Divorced","White","Other","Yes","Male",70,1
+"NACC079770","No",12,"Widowed","White","Private residence","Yes","Female",84,0
+"NACC081222","Yes",14,"Never married","White","Skilled nursing facility/nursing home","No","Female",107,1
+"NACC081240","No",18,"Married","White","Private residence","Yes","Female",71,0
+"NACC082679","No",12,"Widowed","Non-white","Private residence","Yes","Female",64,0
+"NACC083364","No",20,"Married","White","Private residence","Yes","Male",67,0
+"NACC084165","No",12,"Married","White","Skilled nursing facility/nursing home","No","Male",87,1
+"NACC086764","No",12,"Married","White","Private residence","Yes","Female",78,0.5
+"NACC087307","No",21,"Married","White","Private residence","Yes","Female",68,1
+"NACC087641","Yes",16,"Divorced","White","Private residence","No","Female",59,0
+"NACC088527","No",16,"Married","White","Private residence","Yes","Male",66,0
+"NACC088686","No",13,"Never married","White","Private residence","Yes","Female",70,0.5
+"NACC088794","No",21,"Married","White","Private residence","Yes","Female",57,0
+"NACC089074","No",15,"Married","White","Private residence","No","Female",80,0
+"NACC092279","No",10,"Divorced","White","Skilled nursing facility/nursing home","Yes","Male",80,1
+"NACC092316","No",17,"Married","White","Private residence","No","Male",65,1
+"NACC093148","Yes",14,"Married","White","Skilled nursing facility/nursing home","No","Male",78,1
+"NACC093150","No",11,"Widowed","White","Private residence","No","Female",85,1
+"NACC096384","No",12,"Divorced","Non-white","Private residence","No","Female",59,0.5
+"NACC097101","Yes",18,"Widowed","White","Private residence","Yes","Female",74,1
+"NACC097876","No",10,"Widowed","Non-white","Private residence","No","Female",69,0.5
+"NACC098678","No",15,"Married","White","Skilled nursing facility/nursing home","No","Male",87,1
+"NACC099667","No",12,"Separated","Non-white","Private residence","Yes","Female",50,0
+"NACC099969","Yes",16,"Widowed","White","Skilled nursing facility/nursing home","Yes","Male",78,1
+"NACC104331","Yes",12,"Widowed","White","Private residence","Yes","Female",77,1
+"NACC104364","Yes",12,"Divorced","White","Other","Yes","Male",71,0.5
+"NACC106944","No",14,"Married","White","Private residence","No","Male",87,1
+"NACC107306","No",16,"Married","White","Private residence","No","Female",72,0
+"NACC108106","No",12,"Widowed","White","Private residence","No","Female",87,0.5
+"NACC111050","Yes",14,"Married","White","Private residence","Yes","Female",71,1
+"NACC111633","No",20,"Married","White","Private residence","Yes","Male",76,1
+"NACC113819","No",17,"Married","White","Private residence","Yes","Male",68,0
+"NACC114154","No",16,"Married","White","Private residence","Yes","Male",75,0.5
+"NACC115852","Yes",7,"Divorced","White","Skilled nursing facility/nursing home","Yes","Female",92,1
+"NACC117401","No",9,"Widowed","White","Assisted living/boarding home/adult family home","Yes","Female",100,1
+"NACC119186","No",15,"Divorced","Non-white","Private residence","Yes","Female",71,0
+"NACC120745","No",18,"Divorced","Non-white","Private residence","Yes","Female",57,0
+"NACC120913","No",13,"Married","White","Private residence","Yes","Male",72,1
+"NACC121530","No",14,"Divorced","Non-white","Retirement community","Yes","Female",67,1
+"NACC122101","No",16,"Married","White","Private residence","Yes","Male",71,0
+"NACC122262","Yes",21,"Married","White","Private residence","Yes","Female",67,0
+"NACC122986","No",16,"Married","Non-white","Private residence","No","Male",79,0.5
+"NACC125534","No",14,"Married","White","Private residence","No","Male",73,0
+"NACC125756","No",12,"Divorced","Non-white","Retirement community","Yes","Female",78,0
+"NACC126431","Yes",11,"Widowed","White","Private residence","No","Female",76,0.5
+"NACC126986","No",11,"Married","White","Private residence","Yes","Male",76,0.5
+"NACC127508","Yes",16,"Married","White","Skilled nursing facility/nursing home","Yes","Female",80,1
+"NACC128672","No",18,"Married","White","Private residence","No","Male",83,1
+"NACC128962","No",12,"Married","White","Private residence","No","Male",81,0.5
+"NACC129206","No",18,"Married","White","Private residence","No","Male",65,0
+"NACC129861","No",9,"Married","White","Skilled nursing facility/nursing home","No","Male",76,1
+"NACC131216","Yes",16,"Married","White","Skilled nursing facility/nursing home","No","Male",77,1
+"NACC131881","Yes",12,"Married","White","Skilled nursing facility/nursing home","Yes","Male",68,1
+"NACC133355","No",18,"Married","White","Private residence","Yes","Female",77,0.5
+"NACC133382","No",12,"Married","Non-white","Private residence","Yes","Male",63,0.5
+"NACC135425","No",16,"Divorced","White","Private residence","Yes","Female",55,0
+"NACC136257","No",16,"Never married","White","Skilled nursing facility/nursing home","Yes","Female",81,1
+"NACC138066","No",16,"Married","Non-white","Private residence","No","Male",61,0.5
+"NACC140900","Yes",14,"Married","White","Private residence","No","Female",79,0
+"NACC141330","No",12,"Never married","White","Private residence","Yes","Female",69,0
+"NACC141742","No",14,"Married","White","Private residence","No","Female",72,0
+"NACC143524","No",16,"Married","Non-white","Skilled nursing facility/nursing home","No","Male",83,1
+"NACC144257","No",12,"Widowed","White","Skilled nursing facility/nursing home","Yes","Male",79,1
+"NACC144302","No",12,"Never married","Non-white","Private residence","No","Female",72,0
+"NACC144574","No",13,"Married","White","Private residence","No","Male",81,1
+"NACC145807","No",16,"Married","White","Private residence","No","Male",80,0
+"NACC146731","No",20,"Married","White","Private residence","No","Female",61,0
+"NACC148092","No",16,"Married","Non-white","Private residence","No","Male",55,0.5
+"NACC148400","No",18,"Married","White","Private residence","Yes","Male",67,0
+"NACC148802","No",19,"Married","White","Private residence","No","Female",62,0
+"NACC148943","Yes",14,"Married","White","Other","Yes","Male",76,1
+"NACC149971","No",12,"Married","Non-white","Private residence","No","Male",81,0.5
+"NACC149985","Yes",12,"Widowed","White","Private residence","Yes","Female",87,1
+"NACC150786","No",16,"Widowed","Non-white","Private residence","No","Female",63,0
+"NACC153504","No",12,"Married","White","Private residence","No","Male",63,1
+"NACC156398","No",21,"Married","White","Private residence","No","Male",69,0
+"NACC157480","No",14,"Married","White","Private residence","Yes","Male",75,1
+"NACC159016","No",18,"Widowed","White","Retirement community","No","Female",74,0
+"NACC159603","No",14,"Widowed","Non-white","Private residence","No","Female",65,0
+"NACC161998","No",16,"Married","White","Private residence","No","Male",83,1
+"NACC164121","Yes",16,"Married","White","Private residence","Yes","Female",72,0.5
+"NACC164874","No",13,"Married","White","Skilled nursing facility/nursing home","No","Male",59,1
+"NACC164889","Yes",12,"Widowed","White","Private residence","No","Female",81,0
+"NACC165092","No",10,"Married","White","Skilled nursing facility/nursing home","Yes","Male",78,1
+"NACC165995","No",18,"Divorced","White","Private residence","Yes","Female",74,0.5
+"NACC168992","Yes",18,"Married","White","Private residence","No","Male",76,0
+"NACC171391","No",18,"Married","White","Private residence","Yes","Male",82,0
+"NACC172135","Yes",13,"Widowed","White","Skilled nursing facility/nursing home","No","Female",81,1
+"NACC172960","No",19,"Married","White","Private residence","Yes","Male",56,0
+"NACC173833","No",12,"Widowed","White","Private residence","Yes","Female",85,0
+"NACC174061","Yes",12,"Widowed","White","Private residence","No","Female",71,0
+"NACC177303","No",16,"Married","Non-white","Private residence","Yes","Male",78,0.5
+"NACC177499","No",16,"Married","White","Private residence","Yes","Female",77,0.5
+"NACC178166","Yes",12,"Married","White","Private residence","Yes","Male",79,1
+"NACC180207","No",8,"Married","White","Private residence","No","Male",69,1
+"NACC181596","No",8,"Divorced","White","Skilled nursing facility/nursing home","No","Male",79,1
+"NACC182068","No",16,"Never married","White","Private residence","Yes","Female",74,0
+"NACC183512","No",20,"Married","White","Skilled nursing facility/nursing home","Yes","Male",67,1
+"NACC184157","Yes",13,"Divorced","White","Private residence","Yes","Female",81,0
+"NACC184664","Yes",16,"Widowed","White","Private residence","No","Female",84,0
+"NACC184701","No",16,"Married","White","Skilled nursing facility/nursing home","No","Male",89,1
+"NACC188696","No",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",83,1
+"NACC189082","No",18,"Never married","White","Private residence","No","Male",71,0
+"NACC189641","Yes",18,"Married","White","Private residence","No","Male",69,0.5
+"NACC189717","No",12,"Married","White","Private residence","No","Male",67,1
+"NACC190012","No",12,"Widowed","White","Private residence","Yes","Female",83,0.5
+"NACC190997","No",18,"Married","White","Private residence","Yes","Female",71,0
+"NACC192315","Yes",13,"Married","White","Skilled nursing facility/nursing home","No","Male",81,1
+"NACC192364","No",16,"Married","White","Other","Yes","Male",77,1
+"NACC192953","Yes",19,"Married","Non-white","Private residence","No","Female",70,0.5
+"NACC193204","No",16,"Never married","White","Private residence","Yes","Female",83,0
+"NACC196071","No",18,"Married","White","Private residence","Yes","Male",80,0.5
+"NACC197882","Yes",12,"Married","White","Private residence","No","Male",73,1
+"NACC200985","No",8,"Widowed","White","Skilled nursing facility/nursing home","Yes","Female",107,0.5
+"NACC201411","No",13,"Married","White","Skilled nursing facility/nursing home","Yes","Male",81,1
+"NACC201668","Yes",13,"Married","Non-white","Private residence","No","Female",56,0.5
+"NACC202710","No",14,"Married","White","Private residence","No","Male",77,0
+"NACC204661","No",25,"Widowed","White","Private residence","Yes","Female",70,0
+"NACC205573","No",19,"Married","White","Private residence","Yes","Male",73,0
+"NACC205578","Yes",13,"Divorced","Non-white","Private residence","Yes","Female",72,0
+"NACC206161","Yes",16,"Separated","White","Skilled nursing facility/nursing home","No","Male",80,1
+"NACC207491","No",23,"Married","White","Private residence","No","Male",75,0
+"NACC208890","Yes",12,"Married","White","Private residence","Yes","Male",63,1
+"NACC209044","No",19,"Widowed","White","Retirement community","No","Male",76,1
+"NACC209430","No",20,"Married","Non-white","Private residence","No","Male",84,0
+"NACC209879","No",20,"Married","White","Private residence","No","Male",64,0
+"NACC210539","No",13,"Married","White","Skilled nursing facility/nursing home","Yes","Male",82,1
+"NACC211166","No",12,"Married","Non-white","Private residence","Yes","Female",66,0
+"NACC214249","No",16,"Widowed","White","Assisted living/boarding home/adult family home","No","Female",103,0.5
+"NACC214356","No",14,"Married","White","Private residence","No","Female",47,1
+"NACC215278","No",8,"Widowed","White","Private residence","No","Female",79,1
+"NACC216071","No",16,"Divorced","Non-white","Private residence","Yes","Female",78,0
+"NACC219021","No",13,"Divorced","White","Private residence","Yes","Female",67,0
+"NACC221064","No",14,"Widowed","White","Skilled nursing facility/nursing home","Yes","Female",105,1
+"NACC223650","No",18,"Married","White","Private residence","Yes","Female",67,0
+"NACC224800","No",12,"Married","White","Private residence","No","Female",72,0
+"NACC229686","Yes",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",76,1
+"NACC230144","No",17,"Married","White","Private residence","Yes","Female",72,0
+"NACC234457","No",9,"Married","White","Private residence","No","Male",78,0
+"NACC234797","No",16,"Divorced","White","Private residence","Yes","Female",65,0
+"NACC235024","No",18,"Married","White","Private residence","Yes","Female",64,0
+"NACC235173","No",10,"Never married","White","Assisted living/boarding home/adult family home","Yes","Male",78,1
+"NACC236610","No",16,"Divorced","White","Private residence","Yes","Female",62,0
+"NACC241535","Yes",16,"Married","White","Skilled nursing facility/nursing home","No","Male",73,1
+"NACC243111","No",9,"Married","White","Skilled nursing facility/nursing home","No","Male",79,1
+"NACC243291","No",10,"Married","White","Private residence","No","Male",79,1
+"NACC243789","Yes",12,"Married","White","Private residence","Yes","Male",83,1
+"NACC244317","Yes",20,"Married","White","Private residence","No","Male",83,1
+"NACC246414","No",16,"Married","White","Skilled nursing facility/nursing home","No","Male",88,1
+"NACC247137","No",11,"Married","White","Private residence","Yes","Male",78,0.5
+"NACC248304","No",11,"Never married","White","Private residence","No","Female",88,0
+"NACC248535","No",14,"Married","White","Private residence","Yes","Male",81,1
+"NACC251739","No",12,"Married","White","Private residence","No","Female",77,0
+"NACC252285","No",14,"Married","White","Private residence","No","Male",66,0
+"NACC253165","No",22,"Married","White","Private residence","No","Male",84,1
+"NACC254738","No",17,"Divorced","White","Retirement community","No","Male",70,0.5
+"NACC255069","No",9,"Widowed","White","Other","No","Male",81,1
+"NACC255196","No",12,"Widowed","White","Private residence","No","Female",80,0.5
+"NACC257198","Yes",12,"Widowed","Non-white","Skilled nursing facility/nursing home","No","Female",93,1
+"NACC259171","No",15,"Widowed","White","Skilled nursing facility/nursing home","Yes","Male",87,1
+"NACC260104","No",12,"Married","White","Private residence","No","Female",69,0
+"NACC261640","Yes",12,"Married","White","Private residence","Yes","Male",73,1
+"NACC264126","No",12,"Married","Non-white","Private residence","No","Male",77,0
+"NACC264487","No",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",81,1
+"NACC265368","No",14,"Married","White","Skilled nursing facility/nursing home","Yes","Male",71,1
+"NACC266000","Yes",12,"Married","White","Private residence","No","Female",84,0.5
+"NACC266886","No",16,"Married","White","Private residence","Yes","Female",56,0
+"NACC267039","No",14,"Widowed","White","Skilled nursing facility/nursing home","Yes","Female",82,1
+"NACC269325","No",13,"Married","White","Skilled nursing facility/nursing home","Yes","Male",65,1
+"NACC269458","No",14,"Married","White","Private residence","Yes","Male",83,1
+"NACC270652","No",3,"Widowed","Non-white","Private residence","Yes","Male",86,0
+"NACC274735","Yes",12,"Divorced","White","Skilled nursing facility/nursing home","No","Female",85,1
+"NACC275464","No",12,"Widowed","Non-white","Other","No","Female",71,0
+"NACC276168","No",17,"Married","White","Private residence","Yes","Male",78,0.5
+"NACC276233","No",14,"Widowed","White","Private residence","No","Female",76,0
+"NACC277001","Yes",12,"Divorced","Non-white","Private residence","Yes","Female",69,0
+"NACC280241","No",18,"Widowed","White","Private residence","No","Female",72,0
+"NACC281004","No",17,"Never married","White","Retirement community","Yes","Female",77,0
+"NACC282898","No",14,"Widowed","Non-white","Private residence","No","Female",67,0
+"NACC283292","No",14,"Widowed","Non-white","Private residence","Yes","Female",61,0
+"NACC284081","No",15,"Married","White","Private residence","No","Female",69,0.5
+"NACC284400","No",18,"Married","White","Private residence","Yes","Male",61,0
+"NACC285497","No",17,"Separated","White","Private residence","Yes","Male",75,0.5
+"NACC285917","No",12,"Widowed","White","Skilled nursing facility/nursing home","Yes","Female",96,1
+"NACC288818","Yes",12,"Widowed","Non-white","Private residence","Yes","Female",84,1
+"NACC289913","No",11,"Married","Non-white","Private residence","No","Male",61,0.5
+"NACC292324","No",13,"Widowed","Non-white","Private residence","Yes","Female",70,0
+"NACC293744","No",16,"Married","White","Private residence","Yes","Male",72,0
+"NACC295213","No",14,"Married","Non-white","Private residence","No","Female",67,0
+"NACC295867","No",16,"Never married","White","Private residence","Yes","Female",65,0.5
+"NACC295926","No",6,"Widowed","Non-white","Skilled nursing facility/nursing home","Yes","Female",90,1
+"NACC296913","No",22,"Married","White","Private residence","Yes","Male",79,1
+"NACC297187","No",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",57,1
+"NACC301286","No",12,"Married","Non-white","Private residence","No","Male",61,0.5
+"NACC302068","No",13,"Married","White","Private residence","Yes","Male",83,1
+"NACC302598","No",4,"Separated","Non-white","Private residence","No","Male",67,0.5
+"NACC303387","No",16,"Married","White","Private residence","No","Male",69,1
+"NACC304999","Yes",20,"Divorced","White","Private residence","No","Female",68,0
+"NACC306313","No",12,"Married","White","Private residence","No","Male",68,0.5
+"NACC306399","No",20,"Married","White","Private residence","Yes","Female",70,0
+"NACC311226","No",16,"Married","White","Private residence","No","Male",82,0
+"NACC311649","No",6,"Married","White","Skilled nursing facility/nursing home","No","Male",80,1
+"NACC311712","No",10,"Married","White","Other","No","Male",100,1
+"NACC311798","Yes",12,"Married","White","Private residence","No","Male",82,1
+"NACC311985","Yes",14,"Married","White","Private residence","No","Female",76,0
+"NACC312420","No",12,"Married","White","Skilled nursing facility/nursing home","No","Male",83,1
+"NACC314327","No",14,"Married","Non-white","Private residence","No","Female",65,0.5
+"NACC316187","No",14,"Widowed","White","Private residence","Yes","Female",75,1
+"NACC317064","No",12,"Married","White","Private residence","Yes","Male",74,1
+"NACC317158","No",13,"Widowed","White","Skilled nursing facility/nursing home","Yes","Female",77,1
+"NACC317311","Yes",15,"Widowed","Non-white","Private residence","No","Female",74,0
+"NACC318126","No",15,"Widowed","Non-white","Private residence","No","Female",57,0
+"NACC319412","No",16,"Married","White","Private residence","Yes","Male",74,0.5
+"NACC319974","No",20,"Married","White","Private residence","Yes","Male",66,1
+"NACC321645","No",14,"Married","White","Private residence","No","Female",68,0
+"NACC323151","No",9,"Divorced","Non-white","Private residence","No","Male",70,0.5
+"NACC323550","Yes",16,"Widowed","White","Skilled nursing facility/nursing home","No","Male",82,1
+"NACC323994","No",15,"Divorced","Non-white","Private residence","Yes","Male",56,0
+"NACC326965","No",20,"Married","White","Private residence","No","Male",77,0
+"NACC327122","No",16,"Divorced","Non-white","Private residence","No","Female",64,0
+"NACC327341","Yes",18,"Never married","White","Private residence","Yes","Female",75,1
+"NACC327710","No",18,"Married","Non-white","Private residence","No","Female",74,0
+"NACC330071","No",12,"Widowed","Non-white","Private residence","Yes","Female",67,0.5
+"NACC330211","No",12,"Widowed","White","Skilled nursing facility/nursing home","Yes","Male",81,1
+"NACC331613","No",18,"Married","White","Private residence","Yes","Female",69,0
+"NACC332378","No",20,"Married","White","Skilled nursing facility/nursing home","Yes","Male",76,1
+"NACC334104","No",16,"Married","White","Private residence","Yes","Female",67,0
+"NACC335465","No",10,"Never married","White","Skilled nursing facility/nursing home","No","Female",94,0
+"NACC335788","No",12,"Divorced","Non-white","Private residence","Yes","Female",73,0.5
+"NACC335794","No",19,"Married","White","Private residence","Yes","Male",66,0
+"NACC336245","No",20,"Married","White","Private residence","Yes","Male",87,0
+"NACC337169","No",16,"Divorced","White","Private residence","Yes","Female",64,0
+"NACC339143","No",18,"Married","White","Private residence","Yes","Male",73,0.5
+"NACC339248","No",12,"Married","White","Private residence","No","Female",78,0.5
+"NACC340100","No",12,"Widowed","Non-white","Private residence","Yes","Female",90,1
+"NACC340538","No",14,"Married","White","Skilled nursing facility/nursing home","No","Male",77,1
+"NACC341810","Yes",12,"Married","White","Private residence","No","Female",74,1
+"NACC341833","No",16,"Married","Non-white","Private residence","No","Female",75,0
+"NACC341944","No",20,"Divorced","White","Private residence","No","Female",71,0.5
+"NACC342995","No",13,"Widowed","Non-white","Other","No","Female",87,0.5
+"NACC343444","No",22,"Married","White","Skilled nursing facility/nursing home","Yes","Male",85,1
+"NACC343637","Yes",12,"Widowed","White","Private residence","Yes","Female",77,0.5
+"NACC344089","No",12,"Widowed","Non-white","Private residence","Yes","Male",66,0
+"NACC344915","No",16,"Never married","Non-white","Private residence","No","Female",61,0.5
+"NACC345127","No",19,"Married","White","Private residence","No","Female",70,0
+"NACC345670","No",12,"Married","White","Skilled nursing facility/nursing home","No","Male",85,1
+"NACC346298","No",19,"Married","White","Private residence","No","Male",71,0
+"NACC346738","No",12,"Married","White","Private residence","No","Male",86,1
+"NACC347114","No",7,"Widowed","Non-white","Private residence","No","Female",88,1
+"NACC348516","No",18,"Married","White","Private residence","No","Female",68,0
+"NACC351206","No",12,"Widowed","Non-white","Private residence","No","Male",92,0.5
+"NACC352397","Yes",11,"Married","White","Skilled nursing facility/nursing home","No","Male",70,1
+"NACC354142","No",10,"Widowed","White","Private residence","Yes","Male",78,1
+"NACC354724","No",13,"Married","White","Private residence","No","Female",74,1
+"NACC355210","Yes",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",76,1
+"NACC355354","No",20,"Married","White","Private residence","Yes","Female",70,0
+"NACC356683","No",17,"Divorced","Non-white","Private residence","No","Male",58,0
+"NACC360834","No",20,"Divorced","White","Retirement community","No","Female",82,0.5
+"NACC361103","No",10,"Widowed","White","Private residence","No","Male",92,0.5
+"NACC363205","No",18,"Married","White","Private residence","No","Male",82,1
+"NACC365847","No",18,"Married","White","Private residence","No","Female",73,1
+"NACC366242","No",18,"Married","White","Private residence","Yes","Male",75,0.5
+"NACC366688","No",12,"Separated","White","Private residence","No","Male",75,0.5
+"NACC367716","Yes",17,"Married","White","Private residence","No","Female",63,0
+"NACC368689","Yes",18,"Divorced","White","Skilled nursing facility/nursing home","No","Male",74,1
+"NACC368901","No",14,"Married","White","Private residence","Yes","Female",55,0
+"NACC370434","Yes",16,"Married","White","Skilled nursing facility/nursing home","No","Male",76,1
+"NACC373229","No",16,"Married","White","Private residence","No","Male",77,1
+"NACC374489","Yes",12,"Married","White","Skilled nursing facility/nursing home","Yes","Male",77,1
+"NACC379366","No",13,"Widowed","White","Private residence","Yes","Female",82,0
+"NACC379968","No",16,"Married","White","Private residence","Yes","Male",79,1
+"NACC384131","No",7,"Never married","Non-white","Other","No","Female",71,0.5
+"NACC384805","No",8,"Widowed","White","Private residence","No","Male",106,0.5
+"NACC385357","Yes",16,"Married","White","Private residence","Yes","Female",76,1
+"NACC385624","No",18,"Divorced","White","Private residence","No","Male",79,0
+"NACC388999","Yes",16,"Married","White","Private residence","No","Female",64,0
+"NACC390930","No",12,"Divorced","White","Private residence","Yes","Female",58,0
+"NACC391807","No",13,"Widowed","Non-white","Private residence","Yes","Female",78,0
+"NACC393920","No",19,"Married","White","Private residence","Yes","Male",72,1
+"NACC395205","No",10,"Married","White","Private residence","Yes","Male",86,1
+"NACC396023","No",14,"Married","White","Private residence","Yes","Male",71,0.5
+"NACC397942","No",12,"Never married","White","Other","No","Male",70,1
+"NACC398867","No",6,"Widowed","Non-white","Private residence","Yes","Female",78,0.5
+"NACC398874","Yes",12,"Married","White","Skilled nursing facility/nursing home","No","Male",77,1
+"NACC399557","No",14,"Widowed","White","Skilled nursing facility/nursing home","Yes","Male",74,1
+"NACC400431","Yes",18,"Married","White","Private residence","Yes","Male",75,0
+"NACC400576","Yes",14,"Married","White","Skilled nursing facility/nursing home","Yes","Male",69,1
+"NACC401054","No",12,"Married","White","Skilled nursing facility/nursing home","Yes","Male",79,1
+"NACC401604","No",17,"Married","White","Private residence","No","Female",74,0
+"NACC401789","No",11,"Married","White","Private residence","Yes","Male",77,1
+"NACC404555","No",17,"Never married","White","Private residence","No","Female",68,0
+"NACC404946","Yes",12,"Married","White","Other","No","Male",70,1
+"NACC405917","No",22,"Married","White","Private residence","Yes","Male",64,0.5
+"NACC408652","No",13,"Married","White","Skilled nursing facility/nursing home","Yes","Male",82,1
+"NACC408699","No",20,"Widowed","White","Private residence","Yes","Female",66,0
+"NACC408924","No",16,"Never married","Non-white","Private residence","No","Male",59,0.5
+"NACC409971","No",12,"Married","White","Private residence","Yes","Female",66,0
+"NACC410825","No",12,"Widowed","Non-white","Private residence","No","Female",87,1
+"NACC412881","Yes",14,"Married","White","Private residence","Yes","Male",80,1
+"NACC414637","No",10,"Married","White","Skilled nursing facility/nursing home","Yes","Male",81,0
+"NACC415458","No",19,"Married","White","Private residence","No","Male",71,0
+"NACC416209","No",13,"Married","White","Retirement community","No","Male",81,0
+"NACC416367","No",12,"Widowed","White","Private residence","Yes","Female",69,0
+"NACC418018","No",16,"Married","White","Private residence","Yes","Female",82,0.5
+"NACC419290","No",18,"Never married","White","Private residence","Yes","Female",82,0.5
+"NACC420063","Yes",18,"Married","White","Private residence","Yes","Male",84,0.5
+"NACC420461","No",11,"Married","White","Private residence","Yes","Male",75,1
+"NACC420831","No",12,"Separated","Non-white","Private residence","No","Female",65,0
+"NACC420953","Yes",18,"Married","White","Skilled nursing facility/nursing home","Yes","Male",71,1
+"NACC421173","No",19,"Widowed","White","Private residence","Yes","Female",75,0
+"NACC422768","No",16,"Never married","Non-white","Private residence","Yes","Male",59,0
+"NACC423549","No",17,"Widowed","White","Private residence","No","Male",82,0
+"NACC424689","No",12,"Married","Non-white","Private residence","Yes","Female",80,0.5
+"NACC426380","No",16,"Married","White","Private residence","Yes","Male",72,0
+"NACC428836","No",14,"Married","White","Private residence","No","Male",85,0.5
+"NACC429099","No",18,"Married","White","Private residence","No","Male",65,0
+"NACC431186","No",12,"Married","White","Skilled nursing facility/nursing home","No","Male",77,1
+"NACC431867","No",16,"Married","Non-white","Private residence","No","Male",78,0
+"NACC432971","No",18,"Married","White","Private residence","No","Female",76,0
+"NACC432992","No",12,"Married","White","Private residence","No","Female",68,0
+"NACC433360","No",19,"Married","White","Private residence","No","Male",79,1
+"NACC433785","No",15,"Widowed","White","Private residence","No","Female",68,0
+"NACC433956","No",16,"Married","White","Private residence","No","Female",69,0
+"NACC436989","No",16,"Widowed","Non-white","Private residence","No","Female",72,0
+"NACC437400","No",18,"Married","White","Private residence","Yes","Male",65,0
+"NACC437475","No",12,"Never married","Non-white","Private residence","Yes","Female",72,0
+"NACC440143","No",14,"Married","White","Private residence","No","Male",81,0
+"NACC442379","No",13,"Widowed","Non-white","Private residence","No","Female",57,0
+"NACC442947","Yes",12,"Married","White","Private residence","No","Female",82,1
+"NACC443640","No",12,"Married","White","Retirement community","Yes","Male",84,1
+"NACC444662","No",16,"Married","White","Private residence","No","Female",57,0
+"NACC444839","No",18,"Never married","White","Private residence","No","Male",65,0
+"NACC445472","Yes",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",81,1
+"NACC446095","No",3,"Married","Non-white","Private residence","No","Male",77,1
+"NACC446124","No",20,"Divorced","White","Private residence","Yes","Male",70,0
+"NACC446145","Yes",13,"Married","White","Skilled nursing facility/nursing home","No","Male",81,1
+"NACC446255","Yes",18,"Married","White","Skilled nursing facility/nursing home","No","Male",69,1
+"NACC447721","Yes",13,"Widowed","White","Private residence","No","Female",81,0
+"NACC449239","No",18,"Widowed","Non-white","Private residence","No","Female",61,0
+"NACC450350","No",14,"Never married","White","Private residence","Yes","Female",70,0
+"NACC451166","No",8,"Separated","Non-white","Private residence","Yes","Female",73,0.5
+"NACC451356","No",12,"Married","White","Skilled nursing facility/nursing home","Yes","Female",76,1
+"NACC451477","No",9,"Divorced","Non-white","Private residence","No","Female",100,1
+"NACC451576","No",17,"Widowed","White","Skilled nursing facility/nursing home","No","Male",72,1
+"NACC453336","Yes",12,"Married","White","Skilled nursing facility/nursing home","No","Male",71,1
+"NACC453439","No",18,"Divorced","White","Private residence","No","Female",73,0.5
+"NACC456632","Yes",18,"Married","White","Retirement community","Yes","Female",61,0
+"NACC456676","No",16,"Married","White","Private residence","No","Male",74,0.5
+"NACC457225","No",16,"Widowed","White","Private residence","No","Female",81,0
+"NACC458675","No",18,"Married","White","Private residence","No","Male",66,0
+"NACC459422","No",16,"Married","White","Retirement community","Yes","Male",87,1
+"NACC460348","No",24,"Divorced","White","Private residence","No","Male",65,0
+"NACC460683","No",12,"Widowed","White","Skilled nursing facility/nursing home","Yes","Female",82,0
+"NACC464136","Yes",20,"Widowed","Non-white","Private residence","No","Female",84,0.5
+"NACC464559","No",16,"Married","White","Private residence","No","Female",70,0
+"NACC466590","No",12,"Widowed","White","Skilled nursing facility/nursing home","No","Male",102,0.5
+"NACC467107","No",20,"Widowed","White","Private residence","No","Female",85,0.5
+"NACC467934","No",16,"Married","Non-white","Private residence","Yes","Male",57,0.5
+"NACC471337","No",9,"Divorced","Non-white","Private residence","No","Male",81,1
+"NACC472412","Yes",19,"Divorced","White","Private residence","No","Female",59,1
+"NACC473616","No",14,"Divorced","White","Private residence","Yes","Male",75,0.5
+"NACC475117","No",13,"Widowed","White","Private residence","Yes","Female",65,0
+"NACC476633","No",14,"Widowed","Non-white","Private residence","Yes","Female",71,0.5
+"NACC476983","No",12,"Separated","Non-white","Private residence","Yes","Female",68,0
+"NACC477644","No",16,"Married","White","Private residence","Yes","Male",71,0.5
+"NACC477732","No",12,"Married","White","Private residence","Yes","Female",74,1
+"NACC481128","No",12,"Married","White","Private residence","No","Male",65,1
+"NACC481194","No",12,"Married","White","Skilled nursing facility/nursing home","Yes","Male",81,1
+"NACC484778","No",17,"Married","White","Private residence","No","Male",84,1
+"NACC485724","No",12,"Married","White","Skilled nursing facility/nursing home","No","Male",71,1
+"NACC485975","No",9,"Married","Non-white","Private residence","No","Female",73,0.5
+"NACC486679","No",18,"Married","White","Private residence","Yes","Female",60,0
+"NACC488375","No",11,"Divorced","White","Skilled nursing facility/nursing home","No","Female",79,1
+"NACC489990","No",18,"Widowed","White","Skilled nursing facility/nursing home","No","Female",101,1
+"NACC490690","No",14,"Never married","White","Private residence","Yes","Female",80,0
+"NACC491009","No",16,"Divorced","Non-white","Private residence","Yes","Male",72,0
+"NACC496293","No",16,"Married","White","Private residence","No","Male",74,1
+"NACC497102","No",12,"Married","White","Private residence","No","Male",87,0.5
+"NACC498496","No",17,"Divorced","Non-white","Private residence","Yes","Male",55,0
+"NACC499443","No",21,"Married","White","Private residence","Yes","Male",75,1
+"NACC501079","No",12,"Married","White","Retirement community","Yes","Female",83,0.5
+"NACC501213","No",19,"Divorced","White","Private residence","No","Male",67,0
+"NACC501235","No",9,"Divorced","Non-white","Private residence","No","Female",79,0.5
+"NACC502413","No",8,"Widowed","White","Private residence","No","Female",84,1
+"NACC503844","No",12,"Divorced","White","Private residence","No","Female",64,0.5
+"NACC504194","No",9,"Widowed","Non-white","Private residence","No","Female",69,0.5
+"NACC504826","No",8,"Married","Non-white","Private residence","No","Female",67,1
+"NACC505090","No",12,"Married","White","Private residence","No","Female",75,1
+"NACC505780","No",20,"Widowed","White","Private residence","Yes","Male",83,0
+"NACC506167","No",16,"Widowed","White","Retirement community","Yes","Female",78,0
+"NACC507067","No",12,"Never married","Non-white","Private residence","No","Male",69,0
+"NACC508270","No",12,"Married","White","Skilled nursing facility/nursing home","No","Male",85,1
+"NACC509568","Yes",12,"Married","White","Other","No","Male",73,1
+"NACC509631","No",4,"Never married","Non-white","Private residence","No","Female",68,0
+"NACC511898","No",18,"Married","White","Private residence","Yes","Male",66,0
+"NACC512477","No",19,"Married","White","Private residence","Yes","Male",64,0
+"NACC512925","No",8,"Widowed","Non-white","Private residence","No","Female",70,1
+"NACC514601","No",15,"Married","Non-white","Private residence","Yes","Male",79,1
+"NACC514906","No",12,"Widowed","White","Skilled nursing facility/nursing home","No","Female",85,1
+"NACC515261","No",14,"Married","White","Private residence","No","Female",68,0
+"NACC515302","Yes",18,"Widowed","Non-white","Private residence","No","Female",74,0.5
+"NACC515360","No",12,"Widowed","Non-white","Other","No","Female",72,0
+"NACC515423","No",12,"Married","White","Private residence","No","Male",79,1
+"NACC515570","No",12,"Widowed","White","Skilled nursing facility/nursing home","No","Female",87,1
+"NACC515577","No",18,"Married","White","Private residence","Yes","Female",70,0
+"NACC515885","Yes",12,"Married","White","Skilled nursing facility/nursing home","No","Male",72,1
+"NACC516514","Yes",18,"Married","White","Private residence","Yes","Female",73,0
+"NACC516777","Yes",16,"Married","White","Private residence","Yes","Female",69,0.5
+"NACC519282","No",12,"Widowed","Non-white","Private residence","No","Female",69,0.5
+"NACC521509","No",9,"Separated","White","Private residence","Yes","Female",73,0
+"NACC528849","No",14,"Married","White","Private residence","Yes","Female",81,1
+"NACC531929","No",20,"Divorced","White","Private residence","No","Female",68,0
+"NACC532651","No",17,"Widowed","Non-white","Private residence","Yes","Female",59,0
+"NACC533866","No",18,"Married","White","Private residence","No","Female",66,0
+"NACC538243","No",18,"Married","White","Private residence","Yes","Female",63,0
+"NACC539341","No",14,"Married","White","Private residence","No","Male",73,0.5
+"NACC540590","No",18,"Widowed","Non-white","Private residence","No","Female",56,0
+"NACC542561","No",18,"Married","White","Private residence","Yes","Male",68,0
+"NACC544078","No",16,"Married","White","Private residence","Yes","Female",69,0
+"NACC544576","Yes",20,"Married","White","Private residence","No","Male",69,1
+"NACC545472","No",20,"Married","White","Private residence","Yes","Female",83,0
+"NACC546199","No",17,"Married","White","Private residence","No","Male",78,0
+"NACC548789","Yes",14,"Married","White","Private residence","No","Female",76,0
+"NACC550173","No",12,"Widowed","Non-white","Private residence","No","Female",59,0.5
+"NACC550557","Yes",12,"Married","White","Private residence","Yes","Male",83,1
+"NACC550614","No",20,"Never married","Non-white","Private residence","Yes","Female",68,0
+"NACC550785","No",16,"Married","White","Private residence","Yes","Female",58,0
+"NACC552127","No",12,"Married","Non-white","Private residence","Yes","Female",72,0.5
+"NACC552920","No",17,"Widowed","White","Private residence","Yes","Female",69,0
+"NACC553049","No",16,"Married","White","Private residence","Yes","Male",77,0
+"NACC553347","No",20,"Widowed","White","Private residence","Yes","Female",70,0.5
+"NACC554603","No",16,"Married","White","Private residence","Yes","Male",86,1
+"NACC556220","No",16,"Widowed","White","Private residence","No","Female",63,0
+"NACC557933","No",16,"Married","White","Private residence","Yes","Female",77,0
+"NACC558578","No",10,"Never married","Non-white","Other","Yes","Female",69,0
+"NACC559459","No",18,"Married","White","Private residence","Yes","Male",73,0.5
+"NACC559748","No",16,"Married","White","Private residence","Yes","Male",74,0
+"NACC561649","No",20,"Married","White","Skilled nursing facility/nursing home","Yes","Male",69,1
+"NACC562332","Yes",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",79,1
+"NACC563164","No",20,"Married","White","Private residence","No","Female",72,0
+"NACC563602","No",8,"Married","White","Skilled nursing facility/nursing home","No","Male",92,1
+"NACC563670","No",16,"Married","White","Private residence","No","Male",73,0
+"NACC564703","No",12,"Widowed","White","Private residence","Yes","Male",86,1
+"NACC564886","No",12,"Separated","Non-white","Private residence","Yes","Female",74,0
+"NACC565739","Yes",17,"Never married","White","Private residence","Yes","Male",63,0.5
+"NACC566527","No",16,"Married","Non-white","Private residence","Yes","Female",76,0
+"NACC569070","No",14,"Married","White","Skilled nursing facility/nursing home","Yes","Male",76,1
+"NACC569360","Yes",16,"Married","White","Private residence","Yes","Female",70,0.5
+"NACC569993","Yes",10,"Widowed","White","Private residence","Yes","Female",75,0.5
+"NACC573714","No",16,"Married","White","Private residence","No","Male",70,0
+"NACC574560","No",19,"Married","White","Private residence","No","Male",60,0
+"NACC575553","No",18,"Divorced","White","Private residence","No","Male",75,0.5
+"NACC578756","No",14,"Married","White","Skilled nursing facility/nursing home","No","Male",77,1
+"NACC580682","Yes",12,"Widowed","White","Other","Yes","Female",81,1
+"NACC582200","No",14,"Divorced","White","Retirement community","No","Female",84,0
+"NACC584511","No",16,"Married","Non-white","Private residence","No","Male",75,0
+"NACC586850","No",13,"Married","White","Private residence","Yes","Female",79,0.5
+"NACC589744","No",16,"Never married","Non-white","Private residence","No","Female",75,1
+"NACC590898","No",18,"Never married","White","Private residence","No","Male",76,0
+"NACC595226","No",11,"Divorced","Non-white","Private residence","Yes","Female",70,0.5
+"NACC596078","No",12,"Married","Non-white","Private residence","Yes","Female",65,0
+"NACC601246","No",14,"Divorced","White","Private residence","Yes","Male",82,0.5
+"NACC601296","No",12,"Widowed","Non-white","Private residence","Yes","Female",71,0
+"NACC601634","No",9,"Divorced","Non-white","Private residence","No","Female",85,1
+"NACC601850","No",14,"Separated","White","Private residence","No","Female",75,0
+"NACC602461","No",8,"Married","Non-white","Private residence","Yes","Female",66,0.5
+"NACC602726","No",20,"Married","White","Skilled nursing facility/nursing home","No","Male",79,1
+"NACC603711","No",9,"Widowed","White","Private residence","Yes","Female",65,0
+"NACC605143","No",18,"Married","White","Private residence","No","Female",64,0
+"NACC605919","No",9,"Married","Non-white","Private residence","No","Male",75,0.5
+"NACC607689","No",18,"Never married","White","Private residence","No","Male",76,0
+"NACC609395","No",12,"Married","Non-white","Private residence","No","Male",64,0
+"NACC609810","No",9,"Married","White","Private residence","No","Male",79,1
+"NACC610034","No",16,"Widowed","White","Private residence","Yes","Female",71,1
+"NACC610063","No",8,"Widowed","White","Skilled nursing facility/nursing home","No","Male",72,1
+"NACC613448","Yes",5,"Married","White","Skilled nursing facility/nursing home","Yes","Male",45,1
+"NACC613655","Yes",20,"Married","White","Private residence","No","Female",67,0
+"NACC614119","No",9,"Divorced","Non-white","Private residence","No","Male",89,1
+"NACC615714","No",17,"Married","White","Retirement community","Yes","Male",75,0
+"NACC617643","No",18,"Married","Non-white","Private residence","No","Female",60,0
+"NACC617735","No",19,"Widowed","White","Private residence","No","Female",72,0
+"NACC617989","No",17,"Divorced","Non-white","Private residence","Yes","Female",66,0
+"NACC618418","No",18,"Married","White","Skilled nursing facility/nursing home","Yes","Male",81,1
+"NACC618456","No",16,"Married","White","Private residence","Yes","Male",82,1
+"NACC618981","No",16,"Married","White","Other","Yes","Male",78,1
+"NACC619036","Yes",12,"Married","White","Skilled nursing facility/nursing home","No","Male",84,1
+"NACC619221","No",15,"Divorced","Non-white","Private residence","Yes","Female",59,1
+"NACC621434","No",20,"Widowed","White","Private residence","Yes","Male",88,0.5
+"NACC621834","No",18,"Divorced","White","Private residence","No","Female",70,0
+"NACC622578","No",12,"Married","White","Private residence","Yes","Female",77,0
+"NACC622781","No",20,"Married","White","Private residence","Yes","Female",71,0
+"NACC623353","No",17,"Married","White","Private residence","No","Male",73,0
+"NACC625805","No",22,"Never married","White","Private residence","Yes","Female",70,0
+"NACC626797","Yes",21,"Married","White","Skilled nursing facility/nursing home","Yes","Male",80,1
+"NACC628037","No",12,"Married","Non-white","Private residence","No","Female",76,0.5
+"NACC628952","No",18,"Married","White","Private residence","Yes","Female",56,0
+"NACC629421","No",18,"Married","White","Private residence","No","Male",85,0.5
+"NACC630185","No",14,"Never married","White","Private residence","No","Female",80,0
+"NACC631583","No",13,"Married","White","Skilled nursing facility/nursing home","Yes","Male",64,1
+"NACC631882","No",8,"Married","White","Private residence","Yes","Male",87,0.5
+"NACC633881","No",14,"Married","Non-white","Private residence","Yes","Male",75,0.5
+"NACC638567","No",20,"Widowed","White","Private residence","No","Male",100,0
+"NACC638719","Yes",13,"Married","White","Private residence","No","Male",79,1
+"NACC638828","No",14,"Married","White","Private residence","Yes","Female",62,0
+"NACC640212","No",12,"Married","White","Private residence","Yes","Female",79,1
+"NACC640323","No",12,"Married","White","Skilled nursing facility/nursing home","No","Male",65,1
+"NACC643613","No",12,"Married","White","Private residence","Yes","Male",79,0.5
+"NACC645344","No",12,"Widowed","White","Private residence","Yes","Female",74,0
+"NACC646080","Yes",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",68,1
+"NACC646191","No",16,"Married","White","Private residence","Yes","Female",86,1
+"NACC648268","No",12,"Widowed","Non-white","Private residence","No","Female",67,1
+"NACC648944","No",14,"Married","White","Private residence","No","Male",71,1
+"NACC649548","No",16,"Married","White","Private residence","Yes","Male",75,0
+"NACC650214","No",12,"Widowed","White","Retirement community","No","Female",72,0.5
+"NACC650774","No",13,"Divorced","White","Private residence","No","Female",72,0
+"NACC651619","No",16,"Married","Non-white","Private residence","No","Male",74,0
+"NACC651846","Yes",20,"Widowed","White","Skilled nursing facility/nursing home","Yes","Male",80,1
+"NACC652006","Yes",16,"Married","White","Other","Yes","Male",74,1
+"NACC652046","Yes",18,"Widowed","White","Private residence","No","Female",57,0
+"NACC657819","No",14,"Married","White","Private residence","Yes","Female",82,0
+"NACC663653","No",10,"Widowed","Non-white","Private residence","No","Male",73,0.5
+"NACC664066","No",9,"Widowed","Non-white","Private residence","No","Female",75,0.5
+"NACC670162","Yes",10,"Never married","White","Skilled nursing facility/nursing home","No","Male",79,1
+"NACC670306","No",18,"Separated","Non-white","Private residence","No","Male",58,0.5
+"NACC670359","No",16,"Married","White","Skilled nursing facility/nursing home","No","Male",62,1
+"NACC671811","No",15,"Married","White","Private residence","No","Female",74,0
+"NACC674207","No",17,"Married","White","Private residence","No","Male",73,1
+"NACC678364","No",20,"Married","White","Retirement community","No","Female",66,0
+"NACC679404","Yes",14,"Divorced","White","Private residence","Yes","Female",82,0
+"NACC680866","Yes",12,"Widowed","Non-white","Private residence","No","Female",76,0.5
+"NACC681266","No",14,"Married","White","Private residence","Yes","Female",71,0
+"NACC685071","Yes",12,"Married","White","Skilled nursing facility/nursing home","No","Male",78,1
+"NACC687091","No",22,"Married","White","Private residence","No","Male",81,1
+"NACC687781","No",16,"Separated","Non-white","Private residence","Yes","Male",62,0
+"NACC687859","No",18,"Married","White","Private residence","No","Male",77,1
+"NACC688208","Yes",12,"Married","White","Skilled nursing facility/nursing home","Yes","Male",73,1
+"NACC689574","No",12,"Married","Non-white","Private residence","No","Female",74,0.5
+"NACC690679","No",16,"Married","White","Private residence","Yes","Male",79,1
+"NACC690915","No",12,"Divorced","Non-white","Private residence","Yes","Female",71,0.5
+"NACC691369","No",12,"Married","White","Private residence","No","Male",82,0.5
+"NACC692237","No",14,"Widowed","Non-white","Private residence","Yes","Female",71,0
+"NACC693744","No",20,"Married","White","Private residence","No","Male",75,0
+"NACC695611","No",18,"Widowed","White","Private residence","Yes","Male",77,0
+"NACC695970","No",14,"Married","White","Skilled nursing facility/nursing home","Yes","Female",76,1
+"NACC696008","Yes",20,"Married","White","Assisted living/boarding home/adult family home","Yes","Male",70,1
+"NACC696127","No",13,"Widowed","White","Private residence","Yes","Female",67,0.5
+"NACC696170","No",13,"Widowed","White","Private residence","Yes","Male",77,0
+"NACC696821","No",16,"Married","Non-white","Private residence","Yes","Male",76,1
+"NACC698253","No",10,"Widowed","Non-white","Private residence","Yes","Female",56,0.5
+"NACC701862","No",12,"Married","White","Private residence","No","Male",76,0
+"NACC701880","No",9,"Divorced","Non-white","Private residence","Yes","Female",73,0
+"NACC701949","Yes",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",70,1
+"NACC702660","No",13,"Married","White","Private residence","No","Male",76,1
+"NACC704947","No",12,"Married","Non-white","Private residence","Yes","Male",85,1
+"NACC706529","No",18,"Married","White","Private residence","No","Male",82,0.5
+"NACC707069","Yes",12,"Married","White","Skilled nursing facility/nursing home","Yes","Male",76,1
+"NACC707682","No",12,"Married","White","Skilled nursing facility/nursing home","Yes","Male",80,1
+"NACC708741","No",12,"Widowed","White","Assisted living/boarding home/adult family home","No","Female",80,1
+"NACC708862","No",16,"Married","White","Private residence","Yes","Female",72,0.5
+"NACC709173","No",7,"Widowed","White","Private residence","No","Female",70,0.5
+"NACC711148","No",18,"Divorced","Non-white","Private residence","No","Female",74,1
+"NACC711191","Yes",20,"Married","White","Retirement community","Yes","Male",78,0.5
+"NACC712909","Yes",18,"Divorced","White","Private residence","Yes","Female",60,0
+"NACC713236","No",20,"Widowed","White","Private residence","Yes","Female",71,1
+"NACC713662","No",10,"Widowed","White","Private residence","No","Female",68,0
+"NACC713773","No",17,"Married","White","Private residence","Yes","Female",74,0
+"NACC714796","No",16,"Married","White","Other","No","Male",72,1
+"NACC716756","No",12,"Married","White","Skilled nursing facility/nursing home","Yes","Male",83,1
+"NACC717347","Yes",18,"Married","White","Assisted living/boarding home/adult family home","Yes","Male",76,1
+"NACC719603","No",8,"Widowed","Non-white","Private residence","No","Male",70,1
+"NACC725864","No",12,"Married","White","Private residence","No","Male",64,0
+"NACC726118","No",12,"Married","White","Retirement community","No","Female",69,1
+"NACC727110","No",12,"Never married","Non-white","Retirement community","Yes","Male",58,0.5
+"NACC727248","Yes",16,"Married","White","Other","No","Male",80,1
+"NACC727925","Yes",12,"Widowed","White","Assisted living/boarding home/adult family home","No","Female",100,1
+"NACC729660","No",20,"Married","White","Private residence","No","Female",79,0
+"NACC729661","No",16,"Divorced","White","Private residence","Yes","Female",61,0
+"NACC731064","No",18,"Widowed","White","Retirement community","No","Female",76,0
+"NACC731125","No",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",73,1
+"NACC734144","No",12,"Married","White","Private residence","Yes","Male",81,1
+"NACC736593","No",20,"Married","White","Private residence","No","Male",73,1
+"NACC736606","No",17,"Divorced","White","Private residence","Yes","Male",74,0
+"NACC737635","No",13,"Married","White","Private residence","No","Male",79,1
+"NACC738214","Yes",8,"Divorced","White","Private residence","Yes","Male",72,0
+"NACC740300","No",20,"Married","White","Skilled nursing facility/nursing home","Yes","Male",77,1
+"NACC742734","No",9,"Widowed","White","Skilled nursing facility/nursing home","No","Female",93,1
+"NACC744820","No",12,"Widowed","White","Private residence","No","Female",101,0
+"NACC744950","Yes",18,"Married","White","Private residence","No","Male",73,1
+"NACC749211","No",13,"Never married","Non-white","Private residence","Yes","Female",65,0
+"NACC750095","No",17,"Married","White","Private residence","Yes","Male",59,0
+"NACC752725","Yes",18,"Widowed","White","Assisted living/boarding home/adult family home","No","Male",81,1
+"NACC753110","No",18,"Divorced","White","Skilled nursing facility/nursing home","Yes","Female",56,1
+"NACC753361","No",12,"Divorced","White","Skilled nursing facility/nursing home","No","Male",73,1
+"NACC754948","No",16,"Married","White","Private residence","No","Male",79,1
+"NACC757287","Yes",17,"Married","White","Private residence","Yes","Male",64,1
+"NACC758446","No",20,"Married","White","Private residence","No","Male",74,1
+"NACC759406","No",18,"Never married","Non-white","Private residence","Yes","Female",55,0
+"NACC760070","Yes",15,"Married","White","Private residence","Yes","Female",53,0
+"NACC760335","No",12,"Married","White","Private residence","No","Male",76,0.5
+"NACC762156","No",12,"Married","White","Skilled nursing facility/nursing home","No","Male",78,1
+"NACC762296","No",15,"Married","White","Other","No","Male",88,1
+"NACC763348","No",12,"Married","White","Skilled nursing facility/nursing home","No","Male",80,1
+"NACC764280","No",20,"Married","White","Private residence","Yes","Male",98,0
+"NACC766916","Yes",16,"Married","White","Skilled nursing facility/nursing home","No","Male",67,1
+"NACC769451","No",14,"Married","White","Private residence","No","Female",67,0
+"NACC770556","Yes",15,"Widowed","White","Private residence","Yes","Female",78,0.5
+"NACC770959","No",13,"Divorced","White","Skilled nursing facility/nursing home","Yes","Male",68,1
+"NACC771545","Yes",12,"Married","Non-white","Private residence","Yes","Male",81,1
+"NACC772832","Yes",14,"Married","White","Skilled nursing facility/nursing home","Yes","Male",74,1
+"NACC773197","No",12,"Widowed","Non-white","Private residence","No","Female",72,0
+"NACC773673","No",12,"Widowed","White","Skilled nursing facility/nursing home","Yes","Male",74,1
+"NACC774363","No",17,"Divorced","White","Private residence","Yes","Female",80,0.5
+"NACC774894","No",12,"Widowed","White","Skilled nursing facility/nursing home","No","Female",105,1
+"NACC776333","No",18,"Married","White","Private residence","Yes","Male",59,0
+"NACC777958","No",18,"Married","White","Private residence","Yes","Male",70,0.5
+"NACC778305","No",12,"Widowed","White","Private residence","Yes","Female",78,1
+"NACC780934","Yes",20,"Never married","White","Private residence","Yes","Female",59,0.5
+"NACC781543","No",12,"Widowed","Non-white","Private residence","Yes","Female",76,0.5
+"NACC783273","No",14,"Divorced","White","Private residence","No","Male",55,0
+"NACC784678","No",20,"Married","White","Private residence","Yes","Female",76,0
+"NACC784713","Yes",14,"Married","White","Private residence","Yes","Female",82,1
+"NACC787546","No",9,"Divorced","Non-white","Private residence","No","Female",73,0
+"NACC789285","No",12,"Married","White","Private residence","No","Female",81,0
+"NACC789326","No",12,"Widowed","White","Private residence","No","Female",80,0.5
+"NACC789701","No",20,"Divorced","White","Private residence","Yes","Male",71,0
+"NACC790371","No",17,"Widowed","White","Private residence","No","Female",74,0
+"NACC793132","Yes",16,"Married","White","Private residence","Yes","Male",65,0.5
+"NACC793239","No",12,"Divorced","Non-white","Private residence","No","Female",79,0.5
+"NACC795394","No",16,"Never married","White","Private residence","Yes","Female",84,1
+"NACC796040","No",12,"Widowed","White","Private residence","Yes","Female",73,0
+"NACC802648","No",14,"Married","White","Private residence","Yes","Male",80,0.5
+"NACC803372","No",21,"Widowed","White","Private residence","No","Male",63,0
+"NACC804947","No",12,"Married","White","Private residence","Yes","Female",82,1
+"NACC805916","No",13,"Widowed","White","Private residence","Yes","Female",85,1
+"NACC806140","No",20,"Separated","White","Private residence","No","Female",75,0.5
+"NACC807589","No",18,"Never married","Non-white","Private residence","No","Female",75,0
+"NACC807959","No",16,"Married","White","Private residence","No","Male",74,1
+"NACC808183","Yes",15,"Married","White","Skilled nursing facility/nursing home","No","Male",77,1
+"NACC808548","Yes",16,"Married","White","Skilled nursing facility/nursing home","No","Male",66,1
+"NACC808764","No",16,"Divorced","Non-white","Private residence","No","Female",74,0.5
+"NACC809437","No",8,"Widowed","Non-white","Retirement community","No","Female",84,1
+"NACC810444","No",15,"Widowed","White","Assisted living/boarding home/adult family home","Yes","Male",95,1
+"NACC811614","No",16,"Married","White","Private residence","No","Male",83,0.5
+"NACC812420","No",9,"Married","White","Skilled nursing facility/nursing home","No","Male",75,1
+"NACC815458","No",3,"Divorced","White","Private residence","No","Female",63,0.5
+"NACC819300","No",18,"Divorced","White","Retirement community","No","Female",74,0.5
+"NACC820884","No",12,"Divorced","Non-white","Private residence","No","Female",55,0
+"NACC820996","Yes",20,"Married","White","Skilled nursing facility/nursing home","Yes","Male",70,1
+"NACC821143","No",18,"Widowed","Non-white","Private residence","Yes","Female",85,0
+"NACC821782","Yes",15,"Married","White","Private residence","No","Female",61,0.5
+"NACC821865","No",20,"Married","White","Private residence","Yes","Female",70,0
+"NACC823109","No",20,"Married","White","Private residence","Yes","Male",71,0
+"NACC823973","No",12,"Widowed","White","Retirement community","No","Female",82,1
+"NACC825067","No",14,"Married","White","Other","No","Male",72,1
+"NACC825096","No",13,"Married","White","Skilled nursing facility/nursing home","No","Male",85,1
+"NACC825352","No",8,"Widowed","White","Private residence","Yes","Female",56,0
+"NACC827523","No",12,"Married","White","Other","No","Male",65,1
+"NACC827732","Yes",14,"Married","White","Skilled nursing facility/nursing home","No","Male",81,1
+"NACC827921","No",18,"Widowed","Non-white","Retirement community","Yes","Female",72,0
+"NACC828629","No",16,"Widowed","White","Private residence","Yes","Female",73,0.5
+"NACC830078","Yes",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",83,1
+"NACC831085","No",12,"Married","White","Private residence","No","Female",74,0
+"NACC831250","No",16,"Widowed","Non-white","Private residence","No","Female",82,0.5
+"NACC831769","No",12,"Divorced","White","Retirement community","Yes","Female",72,0
+"NACC832329","Yes",16,"Married","White","Other","Yes","Male",69,1
+"NACC833152","No",12,"Married","White","Private residence","Yes","Male",74,1
+"NACC834064","No",19,"Married","White","Private residence","No","Male",74,1
+"NACC834691","No",17,"Married","White","Private residence","Yes","Male",90,1
+"NACC835110","No",17,"Widowed","White","Private residence","Yes","Female",68,0.5
+"NACC836956","No",12,"Married","White","Private residence","No","Male",73,0.5
+"NACC837930","No",13,"Widowed","White","Private residence","No","Female",102,0.5
+"NACC838213","No",13,"Married","Non-white","Private residence","Yes","Female",61,0.5
+"NACC838631","Yes",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",78,1
+"NACC838754","Yes",12,"Married","White","Other","No","Male",82,1
+"NACC839979","No",17,"Married","White","Skilled nursing facility/nursing home","No","Male",72,1
+"NACC842335","Yes",18,"Married","White","Other","No","Male",88,1
+"NACC842730","Yes",13,"Married","White","Private residence","Yes","Female",76,1
+"NACC843307","No",16,"Married","White","Private residence","Yes","Male",98,0.5
+"NACC844070","No",3,"Never married","Non-white","Private residence","Yes","Female",84,1
+"NACC847047","No",2,"Divorced","Non-white","Private residence","No","Male",69,1
+"NACC847320","No",11,"Married","White","Private residence","Yes","Male",89,1
+"NACC847498","Yes",16,"Married","White","Private residence","Yes","Male",70,1
+"NACC847542","Yes",12,"Widowed","White","Private residence","Yes","Male",93,1
+"NACC849393","Yes",16,"Widowed","White","Private residence","Yes","Female",78,0.5
+"NACC850745","No",13,"Married","White","Private residence","Yes","Male",78,0.5
+"NACC851985","Yes",14,"Married","White","Skilled nursing facility/nursing home","Yes","Male",78,1
+"NACC853516","No",17,"Married","White","Private residence","Yes","Female",78,1
+"NACC854643","No",18,"Married","Non-white","Private residence","No","Female",78,0
+"NACC855478","No",19,"Married","White","Private residence","Yes","Female",74,0.5
+"NACC856066","Yes",18,"Married","White","Private residence","Yes","Male",53,1
+"NACC856249","No",12,"Divorced","White","Private residence","No","Female",57,0
+"NACC856571","No",17,"Married","White","Skilled nursing facility/nursing home","Yes","Male",81,1
+"NACC857008","No",15,"Married","White","Skilled nursing facility/nursing home","Yes","Male",82,1
+"NACC858244","No",12,"Married","White","Skilled nursing facility/nursing home","No","Male",84,1
+"NACC860048","No",19,"Married","White","Private residence","Yes","Female",69,0
+"NACC861159","No",12,"Married","White","Private residence","No","Male",74,1
+"NACC861991","No",16,"Widowed","White","Skilled nursing facility/nursing home","No","Female",92,1
+"NACC862057","No",12,"Married","White","Skilled nursing facility/nursing home","No","Male",73,1
+"NACC865754","No",12,"Married","White","Private residence","Yes","Female",76,0.5
+"NACC867196","No",12,"Widowed","White","Private residence","Yes","Female",86,1
+"NACC867605","No",16,"Married","White","Private residence","Yes","Female",60,0
+"NACC868180","No",12,"Married","White","Private residence","Yes","Male",79,1
+"NACC868377","Yes",16,"Married","White","Skilled nursing facility/nursing home","No","Male",79,1
+"NACC869470","No",16,"Never married","White","Skilled nursing facility/nursing home","No","Male",86,1
+"NACC870285","No",8,"Married","White","Skilled nursing facility/nursing home","No","Male",84,1
+"NACC870894","No",16,"Divorced","White","Private residence","Yes","Male",55,0
+"NACC870957","Yes",16,"Married","White","Private residence","No","Female",60,0
+"NACC872118","No",9,"Widowed","White","Private residence","No","Female",82,0.5
+"NACC872424","No",20,"Never married","Non-white","Private residence","No","Female",67,0
+"NACC872925","Yes",15,"Widowed","White","Private residence","No","Male",69,0.5
+"NACC875456","Yes",16,"Never married","White","Skilled nursing facility/nursing home","Yes","Female",78,1
+"NACC876124","No",14,"Married","White","Skilled nursing facility/nursing home","No","Male",70,1
+"NACC876282","No",12,"Married","White","Private residence","Yes","Male",59,0
+"NACC877486","No",20,"Divorced","Non-white","Private residence","No","Female",80,0
+"NACC878511","No",17,"Never married","White","Private residence","No","Female",71,0
+"NACC878687","No",16,"Married","White","Private residence","Yes","Female",72,0
+"NACC879026","No",13,"Never married","Non-white","Retirement community","Yes","Female",76,0
+"NACC879165","Yes",12,"Widowed","White","Skilled nursing facility/nursing home","Yes","Female",80,1
+"NACC881738","No",15,"Married","White","Private residence","No","Female",64,0
+"NACC882138","No",14,"Married","White","Private residence","Yes","Male",57,1
+"NACC882614","No",14,"Married","White","Private residence","Yes","Male",73,1
+"NACC882762","No",8,"Separated","Non-white","Skilled nursing facility/nursing home","No","Male",76,1
+"NACC883134","Yes",12,"Never married","White","Private residence","Yes","Female",77,1
+"NACC883863","No",18,"Married","White","Private residence","No","Male",78,0
+"NACC887802","Yes",12,"Widowed","White","Skilled nursing facility/nursing home","No","Male",78,1
+"NACC888155","No",16,"Divorced","Non-white","Private residence","Yes","Female",64,0
+"NACC889268","No",18,"Never married","White","Private residence","No","Male",79,0.5
+"NACC890139","No",14,"Married","White","Private residence","Yes","Male",82,0
+"NACC890458","No",13,"Never married","White","Assisted living/boarding home/adult family home","No","Female",73,1
+"NACC891039","No",13,"Married","White","Skilled nursing facility/nursing home","Yes","Male",85,1
+"NACC892640","No",15,"Widowed","White","Private residence","No","Female",88,0
+"NACC892818","No",18,"Married","White","Private residence","No","Female",74,0
+"NACC893534","No",13,"Married","White","Retirement community","No","Male",79,0.5
+"NACC893875","No",18,"Married","White","Private residence","Yes","Female",80,0.5
+"NACC893880","Yes",16,"Married","White","Private residence","Yes","Female",72,1
+"NACC894074","No",16,"Married","White","Skilled nursing facility/nursing home","Yes","Male",80,1
+"NACC894435","Yes",17,"Married","White","Private residence","No","Female",55,0
+"NACC897353","No",13,"Widowed","Non-white","Private residence","No","Female",79,0
+"NACC897423","Yes",12,"Married","White","Private residence","Yes","Male",75,1
+"NACC897657","No",20,"Married","White","Private residence","No","Male",57,0.5
+"NACC897718","No",16,"Divorced","Non-white","Private residence","No","Female",73,0
+"NACC898239","No",18,"Married","White","Private residence","Yes","Male",78,0.5
+"NACC899425","No",19,"Married","White","Private residence","Yes","Female",67,0
+"NACC900766","No",12,"Married","Non-white","Private residence","No","Female",66,1
+"NACC903687","No",18,"Married","White","Private residence","Yes","Female",61,0
+"NACC903701","No",13,"Widowed","White","Private residence","No","Female",84,1
+"NACC906536","No",15,"Married","Non-white","Private residence","Yes","Female",60,1
+"NACC907680","No",12,"Widowed","Non-white","Private residence","Yes","Male",65,0
+"NACC908020","No",14,"Never married","White","Skilled nursing facility/nursing home","No","Male",67,1
+"NACC908473","No",18,"Married","White","Assisted living/boarding home/adult family home","Yes","Male",84,1
+"NACC908920","No",18,"Married","White","Private residence","Yes","Male",76,0.5
+"NACC909269","No",18,"Widowed","Non-white","Private residence","Yes","Female",85,0
+"NACC910111","No",19,"Never married","White","Private residence","No","Female",85,0.5
+"NACC913762","No",14,"Divorced","Non-white","Private residence","No","Female",88,1
+"NACC914563","No",20,"Married","White","Private residence","No","Male",87,0
+"NACC914950","No",16,"Married","White","Private residence","Yes","Male",67,0
+"NACC916152","No",9,"Married","White","Private residence","No","Male",97,0
+"NACC917695","Yes",16,"Married","Non-white","Skilled nursing facility/nursing home","Yes","Male",83,1
+"NACC920241","No",12,"Married","White","Private residence","No","Female",65,1
+"NACC920415","No",12,"Married","White","Other","No","Male",74,1
+"NACC923031","No",12,"Widowed","White","Private residence","No","Female",80,0
+"NACC926500","No",14,"Widowed","White","Private residence","Yes","Female",84,0
+"NACC927738","No",12,"Married","White","Private residence","Yes","Male",73,1
+"NACC929099","No",18,"Married","White","Private residence","Yes","Female",56,0
+"NACC930057","No",18,"Married","White","Private residence","No","Male",82,0.5
+"NACC930877","No",13,"Widowed","White","Private residence","Yes","Female",65,0
+"NACC931959","No",14,"Never married","White","Private residence","No","Female",80,0
+"NACC932065","Yes",20,"Married","White","Skilled nursing facility/nursing home","No","Male",77,1
+"NACC934381","No",12,"Widowed","Non-white","Private residence","Yes","Female",74,0.5
+"NACC934893","Yes",12,"Widowed","White","Skilled nursing facility/nursing home","Yes","Male",83,1
+"NACC936308","No",14,"Never married","White","Private residence","Yes","Male",63,0
+"NACC936391","No",16,"Married","White","Private residence","Yes","Female",72,1
+"NACC936823","No",12,"Married","White","Private residence","No","Male",76,1
+"NACC936829","No",14,"Never married","White","Private residence","No","Male",77,0.5
+"NACC937393","Yes",18,"Divorced","White","Private residence","No","Female",55,0
+"NACC937981","No",20,"Married","Non-white","Private residence","No","Male",80,0
+"NACC938973","No",12,"Widowed","White","Private residence","No","Female",56,1
+"NACC941894","No",16,"Married","White","Private residence","No","Male",82,1
+"NACC943925","No",18,"Married","White","Private residence","Yes","Male",70,0
+"NACC944179","No",16,"Widowed","White","Private residence","Yes","Female",82,0
+"NACC945411","Yes",16,"Married","White","Skilled nursing facility/nursing home","No","Male",86,1
+"NACC946736","No",12,"Divorced","White","Skilled nursing facility/nursing home","No","Male",70,1
+"NACC947675","Yes",14,"Widowed","White","Skilled nursing facility/nursing home","Yes","Male",92,1
+"NACC948533","Yes",16,"Married","White","Other","No","Male",77,1
+"NACC950145","Yes",12,"Married","White","Private residence","Yes","Female",80,1
+"NACC951079","Yes",12,"Married","White","Private residence","Yes","Male",88,1
+"NACC951277","No",12,"Married","White","Private residence","No","Male",80,1
+"NACC951597","No",16,"Married","White","Private residence","Yes","Female",79,0
+"NACC951903","No",11,"Separated","Non-white","Private residence","No","Female",66,0
+"NACC951909","Yes",6,"Widowed","White","Skilled nursing facility/nursing home","Yes","Female",102,0.5
+"NACC952238","No",14,"Married","White","Private residence","No","Male",77,0
+"NACC953470","No",15,"Married","White","Private residence","Yes","Female",80,0.5
+"NACC960588","No",7,"Married","White","Private residence","Yes","Male",72,0
+"NACC961914","No",13,"Married","White","Private residence","Yes","Male",80,0
+"NACC962878","Yes",16,"Married","White","Private residence","No","Male",65,0
+"NACC964537","Yes",12,"Married","White","Skilled nursing facility/nursing home","No","Male",79,1
+"NACC966332","No",12,"Married","Non-white","Private residence","Yes","Female",66,0
+"NACC967514","No",12,"Married","White","Private residence","Yes","Male",66,0
+"NACC968465","No",16,"Divorced","White","Private residence","Yes","Female",71,0
+"NACC969075","No",20,"Widowed","White","Private residence","Yes","Male",75,0
+"NACC969312","No",18,"Widowed","White","Private residence","No","Female",75,0
+"NACC970562","No",16,"Married","White","Private residence","Yes","Male",66,0
+"NACC971434","No",13,"Separated","White","Private residence","No","Male",61,0
+"NACC971543","Yes",12,"Married","White","Private residence","Yes","Male",83,1
+"NACC973112","No",22,"Married","White","Private residence","No","Male",77,0
+"NACC974666","Yes",12,"Married","White","Skilled nursing facility/nursing home","Yes","Male",79,1
+"NACC975008","No",17,"Married","White","Private residence","No","Male",58,0
+"NACC975442","Yes",14,"Married","White","Private residence","Yes","Male",68,1
+"NACC975578","No",16,"Married","White","Private residence","No","Female",72,0
+"NACC977150","No",2,"Widowed","Non-white","Private residence","No","Female",85,1
+"NACC978779","No",20,"Widowed","White","Other","No","Male",98,0.5
+"NACC979079","No",9,"Married","White","Private residence","Yes","Male",77,1
+"NACC979097","Yes",3,"Widowed","White","Skilled nursing facility/nursing home","Yes","Male",104,1
+"NACC979966","No",13,"Married","White","Private residence","Yes","Female",68,0.5
+"NACC980174","No",5,"Divorced","Non-white","Private residence","No","Female",81,0
+"NACC980844","No",16,"Married","White","Private residence","No","Female",63,0
+"NACC980946","No",18,"Married","White","Private residence","Yes","Male",80,0.5
+"NACC984654","Yes",16,"Widowed","Non-white","Private residence","Yes","Female",80,1
+"NACC985038","No",16,"Married","White","Other","Yes","Male",87,1
+"NACC985081","No",16,"Married","White","Private residence","No","Male",72,0
+"NACC985604","Yes",18,"Married","Non-white","Private residence","Yes","Female",59,0
+"NACC986206","Yes",11,"Married","White","Skilled nursing facility/nursing home","No","Male",82,1
+"NACC986492","Yes",16,"Married","White","Skilled nursing facility/nursing home","No","Male",83,1
+"NACC988635","Yes",8,"Married","White","Private residence","Yes","Male",78,1
+"NACC993116","No",8,"Widowed","White","Retirement community","Yes","Female",101,0.5
+"NACC993286","No",20,"Married","White","Private residence","Yes","Male",73,0
+"NACC998475","Yes",13,"Separated","Non-white","Skilled nursing facility/nursing home","No","Female",66,0.5
+"NACC999391","No",14,"Widowed","White","Private residence","No","Male",87,0.5
+"NACC999837","No",16,"Divorced","White","Private residence","No","Female",83,0
