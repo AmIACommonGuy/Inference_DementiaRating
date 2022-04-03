@@ -30,7 +30,10 @@ ct$p.value ## not independent
 ## levels of resident types maybe undesirable. I suggest to stratify our model into
 ## private housing, assisted_living+retirement, and skilled nursing.
 
-
+## fit then check odds
+dementia$RLDEM = c(dementia$RLDEM == T)
+fitB = glm(CDR~(DEP + EDUC + MARISTAT + RACE + RESIDENC + FEVALAGE)^2,family=binomial(),data=dementia)
+bstep.crab.fitB3 = step(crab.fitB3,direction="backward",trace=F)
 
 
 
