@@ -7,7 +7,7 @@ attributes(dementia)$names
 View(dementia)
 
 ## Project choice: Demantia
-dementia$CDR = factor(dementia$CDR)
+dementia$CDR = as.numeric(dementia$CDR)
 dementia$RESIDENC = factor(dementia$RESIDENC)
 t1 = data.frame(table(dementia$RESIDENC,dementia$CDR))
 colnames(t1)[1:2] = c('Res','CDR')
@@ -32,8 +32,6 @@ ct$p.value ## not independent
 
 ## fit then check odds
 dementia$RLDEM = c(dementia$RLDEM == T)
-fitB = glm(CDR~(DEP + EDUC + MARISTAT + RACE + RESIDENC + FEVALAGE)^2,family=binomial(),data=dementia)
-bstep.crab.fitB3 = step(crab.fitB3,direction="backward",trace=F)
 
 
 
