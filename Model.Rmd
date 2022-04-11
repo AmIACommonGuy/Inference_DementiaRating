@@ -144,7 +144,7 @@ The unblance here is quite significant. rid of race can also makes our lives eas
 ## Interactions: how you guys want to do this?
 ```{r}
 fit0 <- vglm(data = df, 
-             CDR_ord ~ EDUC_cat*(SEX+Marriage+ DEP + FEVALAGE + RES_PRIVATE),
+             CDR_ord ~ EDUC_cat*(SEX+Marriage+ DEP + FEVALAGE + RES_PRIVATE + RACE),
              family = cumulative('logitlink', parallel = T))
 summary(fit0)
 ```
