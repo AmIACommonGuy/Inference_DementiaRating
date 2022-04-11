@@ -36,8 +36,10 @@ df$MARISTAT <- relevel(df$MARISTAT, ref = 'Never married')
 ## Education: I treat it as continous variable here
 
 ## Education: Categorical
-cut_p <- c(0, 8, 14, 18, 20, 25)
-df$EDUC_cat <- cut(df$EDUC, breaks = cut_p, labels = c('A','B','C','D','E'))
+## based on quantile
+quantile(df$EDUC,probs = c(0,0.25,0.5,0.75,1))
+cut_p <- c(0, 12, 14, 17, 25)
+df$EDUC_cat <- cut(df$EDUC, breaks = cut_p, labels = c('A','B','C','D'))
 ## Depression: 0:No, 1:Yes
 
 ## Race: 0:Non-white 1:White
@@ -109,18 +111,59 @@ I will just use educ as categorical here
 
 ```{r}
 fit0 <- vglm(data = df, 
-             CDR_ord ~ EDUC_cat +SEX+ MARISTAT + RACE + RESIDENC + DEP + FEVALAGE
-             ,
+             CDR_ord ~ EDUC_cat +SEX+ MARISTAT + RACE + RESIDENC + DEP + FEVALAGE,
              family = cumulative('logitlink', parallel = T))
 summary(fit0)
 ```
 
+we need to account for the proportionality assumption
+
 Based on the main model we might want to go back to literature review and modify the form of variables of interests. Overall it looks pretty good.
+
+Recode marriage and residence type
+```{r}
+df$RES_PRIVATE <- df$RESIDENC == 'Private residence'
+df$Marriage <- df$MARISTAT == 'Married'
+```
+
+```{r}
+main_model <- vglm(data = df, 
+             CDR_ord ~ EDUC_cat +SEX+ Marriage + RACE + RES_PRIVATE + DEP + FEVALAGE,
+             family = cumulative('logitlink', parallel = T))
+summary(main_model)
+```
+still need gof test (HLTEST)!
+
+We might want to think about race again
+```{r}
+table(df$RACE)
+```
+The unblance here is quite significant. rid of race can also makes our lives easier.
+
 
 ## Interactions: how you guys want to do this?
 ```{r}
-
+fit0 <- vglm(data = df, 
+             CDR_ord ~ EDUC_cat*(SEX+Marriage+ DEP + FEVALAGE + RES_PRIVATE),
+             family = cumulative('logitlink', parallel = T))
+summary(fit0)
 ```
+
+```{r}
+step4vglm(fit0, direction = 'backward')
+```
+
+According to backward selection 
+CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
+    RES_PRIVATE + EDUC_cat:RES_PRIVATE
+is the best one we get.
+
+We might want to add a few more without education according to lit. review
+
+1. need gof
+2. need model diagnostic
+3. need intepretation
+
 
 
 
