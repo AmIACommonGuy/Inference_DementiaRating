@@ -1,0 +1,28 @@
+---
+title: "model"
+author: "Ziming Huang"
+date: "4/10/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(MASS)
+library(ggplot2)
+```
+
+```{r load data}
+## Set pwd to the project folder
+setwd("~/Desktop/BIOS651/651final/Associations with Clinical Dementia Rating")
+## Project choice 2
+dementia = read.csv("./dementia/mds_center9661.csv", stringsAsFactors = T)
+attributes(dementia)$names
+dim(dementia)
+```
+
+
+```{r}
+
+```
+
+
