@@ -9,6 +9,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(MASS)
 library(ggplot2)
+library(VGAM)
+library(lmtest)
+library(dplyr)
 ```
 
 ```{r load data}
@@ -20,9 +23,139 @@ attributes(dementia)$names
 dim(dementia)
 ```
 
+## Data Cleaning and Variable Selection
+```{r}
+var <- c("EDUC", "SEX", "MARISTAT", "RACE", "RESIDENC", "DEP", "FEVALAGE", "CDR")
+df <- dementia[, var]
+## level: 0:Female, 1:Male
 
+## Relevel marriage status: 0:Never married 1:Divorced 2:Married 3:Widowed 4:Separated
+df$MARISTAT <-factor(df$MARISTAT, levels = c('Never married','Divorced','Married','Widowed','Separated'))
+df$MARISTAT <- relevel(df$MARISTAT, ref = 'Never married')
+
+## Education: I treat it as continous variable here
+
+## Education: Categorical
+cut_p <- c(0, 8, 14, 18, 20, 25)
+df$EDUC_cat <- cut(df$EDUC, breaks = cut_p, labels = c('A','B','C','D','E'))
+## Depression: 0:No, 1:Yes
+
+## Race: 0:Non-white 1:White
+
+## CDR:
+df$CDR <- factor(df$CDR, levels = c(0.0,0.5,1.0), ordered = F)
+df$CDR_ord <- factor(df$CDR, ordered = T)
+```
+
+'other' in residenc is an issue
+```{r}
+t1 = data.frame(table(dementia$RESIDENC,dementia$CDR))
+colnames(t1)[1:2] = c('Res','CDR')
+(x1 = xtabs(data = t1, Freq ~ Res + CDR))
+## there is an association between the choice of res. and CDR level
+## no information about other, can't do any inference. So delete it?
+x1 = x1[-2,]
+(ct <- chisq.test(x1, simulate.p.value = TRUE))
+ct$residuals
+ct$p.value ## not independent
+```
+
+```{r}
+df$RESIDENC <- factor(df$RESIDENC, levels = c('Private residence', 'Retirement community', 'Other', 'Assisted living/boarding home/adult family home', 'Skilled nursing facility/nursing home'))
+df$RESIDENC <- relevel(df$RESIDENC, ref = 'Other')
+```
+
+I didn't check balance here! There are huge unbalance issues within variables such as RESIDENC. 
+We can't simply carry out testing and ignore the poor inference power.
+
+## Model fitting:
+
+This is continuous education
+```{r}
+multi_glm <- vglm(df$CDR ~ df$EDUC, family = multinomial(refLevel = 1))
+multi_glm_null <- vglm(df$CDR ~ 1, family = multinomial())
+waldtest(multi_glm, multi_glm_null)
+lrtest_vglm(multi_glm, multi_glm_null)
+```
+
+categorical education
+```{r}
+multi_glm <- vglm(df$CDR ~ df$EDUC_cat, family = multinomial(refLevel = 1))
+multi_glm_null <- vglm(df$CDR ~ 1, family = multinomial())
+waldtest(multi_glm, multi_glm_null)
+lrtest_vglm(multi_glm, multi_glm_null)
+```
+
+Doesn't really matter which one we use. 
+
+```{r}
+multi_glm <- vglm(df$CDR_ord ~ df$EDUC_cat, family = cumulative(link = 'logitlink', parallel = T))
+multi_glm_null <- vglm(df$CDR_ord ~ 1, family = cumulative(link = 'logitlink', parallel = T))
+waldtest(multi_glm, multi_glm_null)
+lrtest_vglm(multi_glm, multi_glm_null)
+```
+
+```{r}
+multi_glm <- vglm(df$CDR_ord ~ df$EDUC, family = cumulative(link = 'logitlink', parallel = T))
+multi_glm_null <- vglm(df$CDR_ord ~ 1, family = cumulative(link = 'logitlink', parallel = T))
+waldtest(multi_glm, multi_glm_null)
+lrtest_vglm(multi_glm, multi_glm_null)
+```
+
+Cummulative works much better! 
+We can double check the ordinal trend by gamma test or Choctron-Armitage
+
+I will just use educ as categorical here
+
+```{r}
+fit0 <- vglm(data = df, 
+             CDR_ord ~ EDUC_cat +SEX+ MARISTAT + RACE + RESIDENC + DEP + FEVALAGE
+             ,
+             family = cumulative('logitlink', parallel = T))
+summary(fit0)
+```
+
+Based on the main model we might want to go back to literature review and modify the form of variables of interests. Overall it looks pretty good.
+
+## Interactions: how you guys want to do this?
 ```{r}
 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
