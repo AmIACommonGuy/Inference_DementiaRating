@@ -38,7 +38,7 @@ df$MARISTAT <- relevel(df$MARISTAT, ref = 'Never married')
 ## Education: Categorical
 ## based on quantile
 quantile(df$EDUC,probs = c(0,0.25,0.5,0.75,1))
-cut_p <- c(0, 12, 14, 17, 25)
+cut_p <- c(0, 12, 14, 18, 25)
 df$EDUC_cat <- cut(df$EDUC, breaks = cut_p, labels = c('A','B','C','D'))
 ## Depression: 0:No, 1:Yes
 
@@ -116,7 +116,7 @@ fit0 <- vglm(data = df,
 summary(fit0)
 ```
 
-we need to account for the proportionality assumption
+we need to account for the proportionality assumption !!!
 
 Based on the main model we might want to go back to literature review and modify the form of variables of interests. Overall it looks pretty good.
 
@@ -153,34 +153,16 @@ summary(fit0)
 step4vglm(fit0, direction = 'backward')
 ```
 
-According to backward selection 
+According to backward selection + literature review: 
 CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
-    RES_PRIVATE + EDUC_cat:RES_PRIVATE
+    RES_PRIVATE + EDUC_cat:RES_PRIVATE + Race
 is the best one we get.
 
 We might want to add a few more without education according to lit. review
 
-1. need gof
+1. need gof: aic/bic
 2. need model diagnostic
-3. need intepretation
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+3. need interpretation
 
 
 
