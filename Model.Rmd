@@ -126,6 +126,11 @@ df$RES_PRIVATE <- df$RESIDENC == 'Private residence'
 df$Marriage <- df$MARISTAT == 'Married'
 ```
 
+for main model:
+We might want to add a few more without education according to lit. review
+1. need gof: aic/bic/deviance/hltest
+2. need interpretation!!! 
+
 ```{r}
 main_model <- vglm(data = df, 
              CDR_ord ~ EDUC_cat +SEX+ Marriage + RACE + RES_PRIVATE + DEP + FEVALAGE,
@@ -159,11 +164,18 @@ CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE +
 is the best one we get.
 
 We might want to add a few more without education according to lit. review
+1. need gof: aic/bic/deviance/hltest (a lot of work):
+2. need model diagnostic: residual,dfbetas,dffit,cooks dist... (visualizaion):
+      unbalance everywhere, proportional assumption not hold, 
+      (link function might not be logit cloglog or loglog)
+3. need interpretation!!! (a lot of work):
 
-1. need gof: aic/bic
-2. need model diagnostic
-3. need interpretation
 
+```{r}
+summary(vglm(formula = CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
+    RES_PRIVATE + EDUC_cat:RES_PRIVATE, family = cumulative("logitlink", 
+    parallel = T), data = df))
+```
 
 
 
