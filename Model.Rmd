@@ -173,9 +173,70 @@ We might want to add a few more without education according to lit. review
 
 ```{r}
 summary(vglm(formula = CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
-    RES_PRIVATE + EDUC_cat:RES_PRIVATE, family = cumulative("logitlink", 
+    RES_PRIVATE + RACE +EDUC_cat:RES_PRIVATE, family = cumulative("logitlink", 
     parallel = T), data = df))
 ```
+
+```{r}
+library(MASS)
+MF <- polr(CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + RACE+  FEVALAGE + 
+    RES_PRIVATE + EDUC_cat:RES_PRIVATE, data = df, method = 'probit')
+MF
+```
+
+```{r}
+OIM <- polr(CDR_ord ~ 1, data = df)
+anova(OIM,MF)
+```
+
+```{r}
+sum(predict(MF)==df$CDR)
+```
+
+
+## inference is bad at 0.5 group
+```{r}
+sum(predict(MF) == df$CDR)
+```
+
+```{r}
+df$s1 <- (as.numeric(df$CDR)<=1)*1
+df$s2 <- (as.numeric(df$CDR)<=2)*1
+```
+
+```{r}
+sm1 <- glm(data = df, s1~EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
+    RES_PRIVATE + RACE +EDUC_cat:RES_PRIVATE,family = binomial())
+sm2 <- glm(data = df, s2~EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
+    RES_PRIVATE + RACE +EDUC_cat:RES_PRIVATE,family = binomial())
+pm1 <- predict(sm1)
+a=exp(pm1)/(1+exp(pm1))
+pm2 <- predict(sm2)
+b=exp(pm2)/(1+exp(pm2))
+d <- cbind(a,b-a,1-b)
+e = apply(d, 1, which.max)
+sum(df$CDR == (e-1)*0.5)
+```
+
+```{r}
+chisq.test(df$CDR,predict(MF))
+```
+
+```{r}
+AIC(MF)
+BIC(MF)
+PseudoR2(MF, which = c("CoxSnell","Nagelkerke","McFadden"))
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
