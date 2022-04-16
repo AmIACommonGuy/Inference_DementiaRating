@@ -183,16 +183,3 @@ summary(vglm(formula = CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE +
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
