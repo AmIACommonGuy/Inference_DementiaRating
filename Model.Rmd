@@ -25,7 +25,7 @@ dim(dementia)
 
 ## Data Cleaning and Variable Selection
 ```{r}
-var <- c("EDUC", "SEX", "MARISTAT", "RACE", "RESIDENC", "DEP", "FEVALAGE", "CDR")
+var <- c("EDUC", "SEX", "MARISTAT", "RACE", "RESIDENC", "DEP", "FEVALAGE", "CDR", "RLDEM")
 df <- dementia[, var]
 ## level: 0:Female, 1:Male
 
@@ -136,6 +136,7 @@ main_model <- vglm(data = df,
              CDR_ord ~ EDUC_cat +SEX+ Marriage + RACE + RES_PRIVATE + DEP + FEVALAGE,
              family = cumulative('logitlink', parallel = T))
 summary(main_model)
+PseudoR2(MF, which = c("CoxSnell","Nagelkerke","McFadden"))
 ```
 still need gof test (HLTEST)!
 
@@ -156,7 +157,7 @@ summary(fit0)
 
 ```{r}
 step4vglm(fit0, direction = 'backward')
-```
+`
 
 According to backward selection + literature review: 
 CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
@@ -172,25 +173,21 @@ We might want to add a few more without education according to lit. review
 
 
 ```{r}
-summary(vglm(formula = CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
-    RES_PRIVATE + RACE +EDUC_cat:RES_PRIVATE, family = cumulative("logitlink", 
+summary(vglm(formula = CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + RES_PRIVATE + 
+    EDUC_cat:FEVALAGE + EDUC_cat:RES_PRIVATE + RACE, family = cumulative("logitlink", 
     parallel = T), data = df))
 ```
 
 ```{r}
 library(MASS)
-MF <- polr(CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + RACE+  FEVALAGE + 
-    RES_PRIVATE + EDUC_cat:RES_PRIVATE, data = df, method = 'probit')
+MF <- polr(CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + RACE + FEVALAGE + RES_PRIVATE + 
+    EDUC_cat:FEVALAGE + EDUC_cat:RES_PRIVATE, data = df, method = 'logistic')
 MF
 ```
 
 ```{r}
 OIM <- polr(CDR_ord ~ 1, data = df)
 anova(OIM,MF)
-```
-
-```{r}
-sum(predict(MF)==df$CDR)
 ```
 
 
@@ -206,9 +203,9 @@ df$s2 <- (as.numeric(df$CDR)<=2)*1
 
 ```{r}
 sm1 <- glm(data = df, s1~EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
-    RES_PRIVATE + RACE +EDUC_cat:RES_PRIVATE,family = binomial())
+    RES_PRIVATE + EDUC_cat:FEVALAGE+RACE +EDUC_cat:RES_PRIVATE,family = binomial())
 sm2 <- glm(data = df, s2~EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
-    RES_PRIVATE + RACE +EDUC_cat:RES_PRIVATE,family = binomial())
+    RES_PRIVATE + RACE +EDUC_cat:FEVALAGE+EDUC_cat:RES_PRIVATE,family = binomial())
 pm1 <- predict(sm1)
 a=exp(pm1)/(1+exp(pm1))
 pm2 <- predict(sm2)
@@ -227,6 +224,25 @@ AIC(MF)
 BIC(MF)
 PseudoR2(MF, which = c("CoxSnell","Nagelkerke","McFadden"))
 ```
+
+```{r}
+mf <- vglm(formula = CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
+    RES_PRIVATE + RACE +EDUC_cat:RES_PRIVATE, family = cumulative("logitlink", 
+    parallel = T), data = df)
+```
+
+
+```{r}
+library(generalhoslem)
+library(gofcat)
+logitgof(df$CDR, fitted(MF), ord= T)
+#hosmerlem(MF, tables = T)
+```
+
+
+
+
+
 
 
 
