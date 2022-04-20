@@ -12,6 +12,9 @@ library(ggplot2)
 library(VGAM)
 library(lmtest)
 library(dplyr)
+library(generalhoslem)
+library(gofcat)
+library(DescTools)
 ```
 
 ```{r load data}
@@ -19,7 +22,6 @@ library(dplyr)
 setwd("~/Desktop/BIOS651/651final/Associations with Clinical Dementia Rating")
 ## Project choice 2
 dementia = read.csv("./dementia/mds_center9661.csv", stringsAsFactors = T)
-attributes(dementia)$names
 dim(dementia)
 ```
 
@@ -27,48 +29,67 @@ dim(dementia)
 ```{r}
 var <- c("EDUC", "SEX", "MARISTAT", "RACE", "RESIDENC", "DEP", "FEVALAGE", "CDR", "RLDEM")
 df <- dementia[, var]
-## level: 0:Female, 1:Male
 
 ## Relevel marriage status: 0:Never married 1:Divorced 2:Married 3:Widowed 4:Separated
 df$MARISTAT <-factor(df$MARISTAT, levels = c('Never married','Divorced','Married','Widowed','Separated'))
 df$MARISTAT <- relevel(df$MARISTAT, ref = 'Never married')
 
-## Education: I treat it as continous variable here
+## Residence type
+df$RESIDENC <- factor(df$RESIDENC, levels = c('Private residence', 'Retirement community', 'Other', 'Assisted living/boarding home/adult family home', 'Skilled nursing facility/nursing home'))
+df$RESIDENC <- relevel(df$RESIDENC, ref = 'Other')
 
-## Education: Categorical
-## based on quantile
+## Education coded as categorical variable based on the quantile
 quantile(df$EDUC,probs = c(0,0.25,0.5,0.75,1))
+## adjust it to give it meaning
 cut_p <- c(0, 12, 14, 18, 25)
 df$EDUC_cat <- cut(df$EDUC, breaks = cut_p, labels = c('A','B','C','D'))
-## Depression: 0:No, 1:Yes
-
-## Race: 0:Non-white 1:White
-
 ## CDR:
 df$CDR <- factor(df$CDR, levels = c(0.0,0.5,1.0), ordered = F)
 df$CDR_ord <- factor(df$CDR, ordered = T)
 ```
 
-'other' in residenc is an issue
+## analysis on residenc
 ```{r}
 t1 = data.frame(table(dementia$RESIDENC,dementia$CDR))
 colnames(t1)[1:2] = c('Res','CDR')
 (x1 = xtabs(data = t1, Freq ~ Res + CDR))
-## there is an association between the choice of res. and CDR level
-## no information about other, can't do any inference. So delete it?
 x1 = x1[-2,]
 (ct <- chisq.test(x1, simulate.p.value = TRUE))
 ct$residuals
 ct$p.value ## not independent
+
+## To deal with the unbalance and other, we combine res into private vs non-private
+df$RES_PRIVATE <- df$RESIDENC == 'Private residence'
+t2 = data.frame(table(df$RES_PRIVATE,dementia$CDR))
+colnames(t2)[1:2] = c('Res','CDR')
+(x2 = xtabs(data = t2, Freq ~ Res + CDR))
+x2 = x2[-2,]
+(ct <- chisq.test(x2, simulate.p.value = TRUE))
+ct$residuals
+ct$p.value ## not independent, we still preserve the association. Binary res seems valid!
 ```
+
 
 ```{r}
-df$RESIDENC <- factor(df$RESIDENC, levels = c('Private residence', 'Retirement community', 'Other', 'Assisted living/boarding home/adult family home', 'Skilled nursing facility/nursing home'))
-df$RESIDENC <- relevel(df$RESIDENC, ref = 'Other')
+table(df$MARISTAT)
+t3 = data.frame(table(dementia$MARISTAT,dementia$CDR))
+colnames(t3)[1:2] = c('marriage','CDR')
+(x3 = xtabs(data = t3, Freq ~ marriage + CDR))
+(ct <- chisq.test(x3, simulate.p.value = TRUE))
+ct$residuals
+ct$p.value ## not independent
+## To address this we combine marriage into binary 
+
+df$Marriage <- df$MARISTAT == 'Married'
+t4 = data.frame(table(df$Marriage,dementia$CDR))
+colnames(t4)[1:2] = c('marriage','CDR')
+(x4 = xtabs(data = t4, Freq ~ marriage + CDR))
+(ct <- chisq.test(x4, simulate.p.value = TRUE))
+ct$residuals
+ct$p.value ## not independent
+
 ```
 
-I didn't check balance here! There are huge unbalance issues within variables such as RESIDENC. 
-We can't simply carry out testing and ignore the poor inference power.
 
 ## Model fitting:
 
@@ -88,48 +109,66 @@ waldtest(multi_glm, multi_glm_null)
 lrtest_vglm(multi_glm, multi_glm_null)
 ```
 
-Doesn't really matter which one we use. 
+Doesn't really matter which one we use. Our main covariate education is significant! We want to use
+categorical to increase intepretability.
+
+## Cummulative model:
+There is obvious trend within cdr, so we want to check the cummulative model for it!
 
 ```{r}
-multi_glm <- vglm(df$CDR_ord ~ df$EDUC_cat, family = cumulative(link = 'logitlink', parallel = T))
-multi_glm_null <- vglm(df$CDR_ord ~ 1, family = cumulative(link = 'logitlink', parallel = T))
-waldtest(multi_glm, multi_glm_null)
-lrtest_vglm(multi_glm, multi_glm_null)
+cumu_glm <- vglm(df$CDR_ord ~ df$EDUC_cat, family = cumulative(link = 'logitlink', parallel = F))
+cumu_glm_null <- vglm(df$CDR_ord ~ 1, family = cumulative(link = 'logitlink', parallel = F))
+waldtest(cumu_glm, cumu_glm_null)
+lrtest_vglm(cumu_glm, cumu_glm_null)
+```
+
+further we want to check if the effect of education is homogenous
+```{r}
+cumu_glm_T <- vglm(df$CDR_ord ~ df$EDUC_cat, family = cumulative(link = 'logitlink', parallel = T))
+lrtest_vglm(cumu_glm, cumu_glm_T)
+```
+No, it is not statistically correct to assume proportionality assumption.
+
+## Main model regression:
+
+we first want to check vif before adding confounders (based on literature review)
+```{r}
+df$s1 <- (as.numeric(df$CDR)<=1)*1
+df$s2 <- (as.numeric(df$CDR)<=2)*1
+sm1 <- glm(data = df, s1~EDUC_cat + SEX + MARISTAT + DEP + FEVALAGE + 
+    RES_PRIVATE,family = binomial())
+sm2 <- glm(data = df, s2~EDUC_cat + SEX + MARISTAT + DEP + FEVALAGE + 
+    RES_PRIVATE + RACE,family = binomial())
+vif(sm1)
+vif(sm2)
+```
+There is no colinearity 
+```{r}
+main_model_F <- vglm(data = df, 
+             CDR_ord ~ EDUC_cat +SEX+ Marriage+ RACE + RES_PRIVATE + DEP + FEVALAGE,
+             family = cumulative('logitlink', parallel = F))
+summary(main_model_F)
+logLik.vlm(main_model_F)
+```
+The loglik is not reasonable! The non-parallelism assumption has resulted in intersecting linear/additive predictors. 
+```{r}
+## To avoid the unreasonable model, i wrote it myself
+cumf_m1 <- glm(data = df, s1~EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
+    RES_PRIVATE, family = binomial())
+cumf_m2 <- glm(data = df, s2~EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
+    RES_PRIVATE + RACE,family = binomial())
+ll1 <- logLik(cumf_m1)
+ll2 <- logLik(cumf_m2)
+ll1+ll2
 ```
 
 ```{r}
-multi_glm <- vglm(df$CDR_ord ~ df$EDUC, family = cumulative(link = 'logitlink', parallel = T))
-multi_glm_null <- vglm(df$CDR_ord ~ 1, family = cumulative(link = 'logitlink', parallel = T))
-waldtest(multi_glm, multi_glm_null)
-lrtest_vglm(multi_glm, multi_glm_null)
-```
-
-Cummulative works much better! 
-We can double check the ordinal trend by gamma test or Choctron-Armitage
-
-I will just use educ as categorical here
-
-```{r}
-fit0 <- vglm(data = df, 
-             CDR_ord ~ EDUC_cat +SEX+ MARISTAT + RACE + RESIDENC + DEP + FEVALAGE,
+main_model_T <- vglm(data = df, 
+             CDR_ord ~ EDUC_cat +SEX+ Marriage+ RACE + RES_PRIVATE + DEP + FEVALAGE,
              family = cumulative('logitlink', parallel = T))
-summary(fit0)
 ```
 
-we need to account for the proportionality assumption !!!
-
-Based on the main model we might want to go back to literature review and modify the form of variables of interests. Overall it looks pretty good.
-
-Recode marriage and residence type
-```{r}
-df$RES_PRIVATE <- df$RESIDENC == 'Private residence'
-df$Marriage <- df$MARISTAT == 'Married'
-```
-
-for main model:
-We might want to add a few more without education according to lit. review
-1. need gof: aic/bic/deviance/hltest
-2. need interpretation!!! 
+we will stick to this model = T
 
 ```{r}
 main_model <- vglm(data = df, 
@@ -138,16 +177,8 @@ main_model <- vglm(data = df,
 summary(main_model)
 PseudoR2(MF, which = c("CoxSnell","Nagelkerke","McFadden"))
 ```
-still need gof test (HLTEST)!
-
-We might want to think about race again
-```{r}
-table(df$RACE)
-```
-The unblance here is quite significant. rid of race can also makes our lives easier.
-
-
-## Interactions: how you guys want to do this?
+## Interactions: 
+Add interaction based on aic
 ```{r}
 fit0 <- vglm(data = df, 
              CDR_ord ~ EDUC_cat*(SEX+Marriage+ DEP + FEVALAGE + RES_PRIVATE + RACE),
@@ -156,52 +187,47 @@ summary(fit0)
 ```
 
 ```{r}
-step4vglm(fit0, direction = 'backward')
-`
+step4vglm(fit0)
+```
 
-According to backward selection + literature review: 
-CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
-    RES_PRIVATE + EDUC_cat:RES_PRIVATE + Race
+
+
+According to both direction selection + literature review: 
+CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + RACE
+    RES_PRIVATE + EDUC_cat:FEVALAGE + EDUC_cat:RES_PRIVATE
 is the best one we get.
 
-We might want to add a few more without education according to lit. review
-1. need gof: aic/bic/deviance/hltest (a lot of work):
-2. need model diagnostic: residual,dfbetas,dffit,cooks dist... (visualizaion):
-      unbalance everywhere, proportional assumption not hold, 
-      (link function might not be logit cloglog or loglog)
-3. need interpretation!!! (a lot of work):
-
 
 ```{r}
-summary(vglm(formula = CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + RES_PRIVATE + 
-    EDUC_cat:FEVALAGE + EDUC_cat:RES_PRIVATE + RACE, family = cumulative("logitlink", 
-    parallel = T), data = df))
+fm <- vglm(CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + RACE+
+    RES_PRIVATE + EDUC_cat:FEVALAGE + EDUC_cat:RES_PRIVATE, data = df,family = cumulative("logitlink", 
+    parallel = T))
+summary(fm)
 ```
 
 ```{r}
-library(MASS)
-MF <- polr(CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + RACE + FEVALAGE + RES_PRIVATE + 
-    EDUC_cat:FEVALAGE + EDUC_cat:RES_PRIVATE, data = df, method = 'logistic')
-MF
+## check linearity for age
+df$FEVALAGE2=df$FEVALAGE^2
+fm2 <- vglm(CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + FEVALAGE2 + RACE+
+    RES_PRIVATE + EDUC_cat:FEVALAGE + EDUC_cat:RES_PRIVATE, data = df,family = cumulative("logitlink", 
+    parallel = T))
+lrtest_vglm(fm2,fm)
+```
+The non-linear effect is not significant 
+
+```{r}
+AIC(fm)
+BIC(fm)
+
+n = dim(df)[1]
+prob_table <- exp(predict(fm))/(1+exp(predict(fm)))
+prob_table <- cbind(prob_table[,1], prob_table[,2]-prob_table[,1], 1-prob_table[,2])
+prediction = apply(d, 1, which.max)
+(accuracy = sum(df$CDR == (prediction-1)*0.5)/n)
 ```
 
 ```{r}
-OIM <- polr(CDR_ord ~ 1, data = df)
-anova(OIM,MF)
-```
-
-
-## inference is bad at 0.5 group
-```{r}
-sum(predict(MF) == df$CDR)
-```
-
-```{r}
-df$s1 <- (as.numeric(df$CDR)<=1)*1
-df$s2 <- (as.numeric(df$CDR)<=2)*1
-```
-
-```{r}
+## accuracy for parrellal = F coding
 sm1 <- glm(data = df, s1~EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
     RES_PRIVATE + EDUC_cat:FEVALAGE+RACE +EDUC_cat:RES_PRIVATE,family = binomial())
 sm2 <- glm(data = df, s2~EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
@@ -212,34 +238,21 @@ pm2 <- predict(sm2)
 b=exp(pm2)/(1+exp(pm2))
 d <- cbind(a,b-a,1-b)
 e = apply(d, 1, which.max)
-sum(df$CDR == (e-1)*0.5)
+e= apply(d, 1, which.max)
+(accuracy = sum(df$CDR == (e-1)*0.5)/n)
 ```
 
 ```{r}
-chisq.test(df$CDR,predict(MF))
+# McFadden's pseudo-R^2
+null_fm <- vglm(CDR_ord ~ 1, data = df,family = cumulative("logitlink", 
+    parallel = T))
+print(pseudo_R2 <- 1 - deviance(fm) / deviance(null_fm))
 ```
 
+## Hoslem
 ```{r}
-AIC(MF)
-BIC(MF)
-PseudoR2(MF, which = c("CoxSnell","Nagelkerke","McFadden"))
+logitgof(df$CDR, fitted(fm), ord= T, g = 5)
 ```
-
-```{r}
-mf <- vglm(formula = CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
-    RES_PRIVATE + RACE +EDUC_cat:RES_PRIVATE, family = cumulative("logitlink", 
-    parallel = T), data = df)
-```
-
-
-```{r}
-library(generalhoslem)
-library(gofcat)
-logitgof(df$CDR, fitted(MF), ord= T)
-#hosmerlem(MF, tables = T)
-```
-
-
 
 
 
