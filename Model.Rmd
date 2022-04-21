@@ -139,8 +139,6 @@ sm1 <- glm(data = df, s1~EDUC_cat + SEX + MARISTAT + DEP + FEVALAGE +
     RES_PRIVATE,family = binomial())
 sm2 <- glm(data = df, s2~EDUC_cat + SEX + MARISTAT + DEP + FEVALAGE + 
     RES_PRIVATE + RACE,family = binomial())
-vif(sm1)
-vif(sm2)
 ```
 There is no colinearity 
 ```{r}
@@ -151,6 +149,7 @@ summary(main_model_F)
 logLik.vlm(main_model_F)
 ```
 The loglik is not reasonable! The non-parallelism assumption has resulted in intersecting linear/additive predictors. 
+
 ```{r}
 ## To avoid the unreasonable model, i wrote it myself
 cumf_m1 <- glm(data = df, s1~EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
@@ -166,6 +165,7 @@ ll1+ll2
 main_model_T <- vglm(data = df, 
              CDR_ord ~ EDUC_cat +SEX+ Marriage+ RACE + RES_PRIVATE + DEP + FEVALAGE,
              family = cumulative('logitlink', parallel = T))
+logLik.vlm(main_model_T)
 ```
 
 we will stick to this model = T
@@ -175,7 +175,6 @@ main_model <- vglm(data = df,
              CDR_ord ~ EDUC_cat +SEX+ Marriage + RACE + RES_PRIVATE + DEP + FEVALAGE,
              family = cumulative('logitlink', parallel = T))
 summary(main_model)
-PseudoR2(MF, which = c("CoxSnell","Nagelkerke","McFadden"))
 ```
 ## Interactions: 
 Add interaction based on aic
@@ -219,10 +218,11 @@ The non-linear effect is not significant
 AIC(fm)
 BIC(fm)
 
+## not necessary
 n = dim(df)[1]
 prob_table <- exp(predict(fm))/(1+exp(predict(fm)))
 prob_table <- cbind(prob_table[,1], prob_table[,2]-prob_table[,1], 1-prob_table[,2])
-prediction = apply(d, 1, which.max)
+prediction = apply(prob_table, 1, which.max)
 (accuracy = sum(df$CDR == (prediction-1)*0.5)/n)
 ```
 
@@ -246,6 +246,7 @@ e= apply(d, 1, which.max)
 # McFadden's pseudo-R^2
 null_fm <- vglm(CDR_ord ~ 1, data = df,family = cumulative("logitlink", 
     parallel = T))
+lrtest_vglm(null_fm, fm)
 print(pseudo_R2 <- 1 - deviance(fm) / deviance(null_fm))
 ```
 
@@ -254,6 +255,14 @@ print(pseudo_R2 <- 1 - deviance(fm) / deviance(null_fm))
 logitgof(df$CDR, fitted(fm), ord= T, g = 5)
 ```
 
+we pick several g 
+
+variance covariance plot check for colinearity 
+
+```{r}
+VIF(sm1)
+VIF(sm2)
+```
 
 
 
