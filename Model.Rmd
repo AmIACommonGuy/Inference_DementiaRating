@@ -15,17 +15,18 @@ library(dplyr)
 library(generalhoslem)
 library(gofcat)
 library(DescTools)
+library(kableExtra)
 ```
 
 ```{r load data}
 ## Set pwd to the project folder
-setwd("~/Desktop/BIOS651/651final/Associations with Clinical Dementia Rating")
 ## Project choice 2
-dementia = read.csv("./dementia/mds_center9661.csv", stringsAsFactors = T)
+dementia = read.csv("~/Downloads/mds_center9661.csv", stringsAsFactors = T)
 dim(dementia)
 ```
 
 ## Data Cleaning and Variable Selection
+
 ```{r}
 var <- c("EDUC", "SEX", "MARISTAT", "RACE", "RESIDENC", "DEP", "FEVALAGE", "CDR", "RLDEM")
 df <- dementia[, var]
@@ -49,6 +50,7 @@ df$CDR_ord <- factor(df$CDR, ordered = T)
 ```
 
 ## analysis on residenc
+
 ```{r}
 t1 = data.frame(table(dementia$RESIDENC,dementia$CDR))
 colnames(t1)[1:2] = c('Res','CDR')
@@ -68,7 +70,6 @@ x2 = x2[-2,]
 ct$residuals
 ct$p.value ## not independent, we still preserve the association. Binary res seems valid!
 ```
-
 
 ```{r}
 table(df$MARISTAT)
@@ -90,10 +91,10 @@ ct$p.value ## not independent
 
 ```
 
-
 ## Model fitting:
 
 This is continuous education
+
 ```{r}
 multi_glm <- vglm(df$CDR ~ df$EDUC, family = multinomial(refLevel = 1))
 multi_glm_null <- vglm(df$CDR ~ 1, family = multinomial())
@@ -102,6 +103,7 @@ lrtest_vglm(multi_glm, multi_glm_null)
 ```
 
 categorical education
+
 ```{r}
 multi_glm <- vglm(df$CDR ~ df$EDUC_cat, family = multinomial(refLevel = 1))
 multi_glm_null <- vglm(df$CDR ~ 1, family = multinomial())
@@ -109,10 +111,10 @@ waldtest(multi_glm, multi_glm_null)
 lrtest_vglm(multi_glm, multi_glm_null)
 ```
 
-Doesn't really matter which one we use. Our main covariate education is significant! We want to use
-categorical to increase intepretability.
+Doesn't really matter which one we use. Our main covariate education is significant! We want to use categorical to increase intepretability.
 
 ## Cummulative model:
+
 There is obvious trend within cdr, so we want to check the cummulative model for it!
 
 ```{r}
@@ -123,15 +125,18 @@ lrtest_vglm(cumu_glm, cumu_glm_null)
 ```
 
 further we want to check if the effect of education is homogenous
+
 ```{r}
 cumu_glm_T <- vglm(df$CDR_ord ~ df$EDUC_cat, family = cumulative(link = 'logitlink', parallel = T))
 lrtest_vglm(cumu_glm, cumu_glm_T)
 ```
+
 No, it is not statistically correct to assume proportionality assumption.
 
 ## Main model regression:
 
 we first want to check vif before adding confounders (based on literature review)
+
 ```{r}
 df$s1 <- (as.numeric(df$CDR)<=1)*1
 df$s2 <- (as.numeric(df$CDR)<=2)*1
@@ -140,8 +145,8 @@ sm1 <- glm(data = df, s1~EDUC_cat + SEX + MARISTAT + DEP + FEVALAGE +
 sm2 <- glm(data = df, s2~EDUC_cat + SEX + MARISTAT + DEP + FEVALAGE + 
     RES_PRIVATE + RACE,family = binomial())
 ```
-There is no colinearity 
 
+There is no colinearity
 
 ```{r}
 main_model_F <- vglm(data = df, 
@@ -150,7 +155,8 @@ main_model_F <- vglm(data = df,
 summary(main_model_F)
 logLik.vlm(main_model_F)
 ```
-The loglik is not reasonable! The non-parallelism assumption has resulted in intersecting linear/additive predictors. 
+
+The loglik is not reasonable! The non-parallelism assumption has resulted in intersecting linear/additive predictors.
 
 ```{r}
 ## To avoid the unreasonable model, i wrote it myself
@@ -167,7 +173,6 @@ ll1+ll2
 main_model_T <- vglm(data = df, 
              CDR_ord ~ EDUC_cat +SEX+ Marriage+ RACE + RES_PRIVATE + DEP + FEVALAGE,
              family = cumulative('logitlink', parallel = T))
-logLik.vlm(main_model_T)
 ```
 
 we will stick to this model = T
@@ -177,9 +182,13 @@ main_model <- vglm(data = df,
              CDR_ord ~ EDUC_cat +SEX+ Marriage + RACE + RES_PRIVATE + DEP + FEVALAGE,
              family = cumulative('logitlink', parallel = T))
 summary(main_model)
+#PseudoR2(MF, which = c("CoxSnell","Nagelkerke","McFadden"))
 ```
-## Interactions: 
+
+## Interactions:
+
 Add interaction based on aic
+
 ```{r}
 fit0 <- vglm(data = df, 
              CDR_ord ~ EDUC_cat*(SEX+Marriage+ DEP + FEVALAGE + RES_PRIVATE + RACE),
@@ -191,13 +200,7 @@ summary(fit0)
 step4vglm(fit0)
 ```
 
-
-
-According to both direction selection + literature review: 
-CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + RACE
-    RES_PRIVATE + EDUC_cat:FEVALAGE + EDUC_cat:RES_PRIVATE
-is the best one we get.
-
+According to both direction selection + literature review: CDR_ord \~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + RACE RES_PRIVATE + EDUC_cat:FEVALAGE + EDUC_cat:RES_PRIVATE is the best one we get.
 
 ```{r}
 fm <- vglm(CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + RACE+
@@ -214,7 +217,8 @@ fm2 <- vglm(CDR_ord ~ EDUC_cat + SEX + Marriage + DEP + FEVALAGE + FEVALAGE2 + R
     parallel = T))
 lrtest_vglm(fm2,fm)
 ```
-The non-linear effect is not significant 
+
+The non-linear effect is not significant
 
 ```{r}
 #marriage, residence, FEVALAGE are issues
@@ -235,23 +239,21 @@ mainFfinal<-update(mainF3, .~.+RACE)
 summary(mainFfinal)
 ```
 
-
 ```{r}
+summary(fm)
+
 AIC(fm)
 BIC(fm)
 
-## not necessary
 n = dim(df)[1]
 prob_table <- exp(predict(fm))/(1+exp(predict(fm)))
 prob_table <- cbind(prob_table[,1], prob_table[,2]-prob_table[,1], 1-prob_table[,2])
-prediction = apply(prob_table, 1, which.max)
+prediction = apply(d, 1, which.max)
 (accuracy = sum(df$CDR == (prediction-1)*0.5)/n)
 ```
 
-
-
-
 Veera said no to the binary logistic regression.
+
 ```{r}
 ## accuracy for parrellal = F coding
 sm1 <- glm(data = df, s1~EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
@@ -277,21 +279,20 @@ print(pseudo_R2 <- 1 - deviance(fm) / deviance(null_fm))
 ```
 
 ## Hoslem
+
 ```{r}
 logitgof(df$CDR, fitted(fm), ord= T, g = 5)
+
+hl_table <- function(data,model){
+  table <- matrix(NA,nrow=10,ncol=2)
+  row_tally<-1
+  for(gval in 2:11) {
+      table[row_tally,1] <-gval
+      table[row_tally,2] <-logitgof(data, model, ord= T, g = gval)$p.value
+      row_tally<-row_tally+1
+  }
+  colnames(table)<-list(c("g parameter"), c("p-value"))
+table
+}
+kable(hl_table(df$CDR, fitted(fm)))
 ```
-
-we pick several g 
-
-variance covariance plot check for colinearity 
-
-```{r}
-VIF(sm1)
-VIF(sm2)
-```
-
-
-
-
-
-
