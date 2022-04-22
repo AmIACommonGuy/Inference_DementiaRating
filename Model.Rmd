@@ -141,6 +141,8 @@ sm2 <- glm(data = df, s2~EDUC_cat + SEX + MARISTAT + DEP + FEVALAGE +
     RES_PRIVATE + RACE,family = binomial())
 ```
 There is no colinearity 
+
+
 ```{r}
 main_model_F <- vglm(data = df, 
              CDR_ord ~ EDUC_cat +SEX+ Marriage+ RACE + RES_PRIVATE + DEP + FEVALAGE,
@@ -215,6 +217,26 @@ lrtest_vglm(fm2,fm)
 The non-linear effect is not significant 
 
 ```{r}
+#marriage, residence, FEVALAGE are issues
+mainF1 <- vglm(data = df, 
+             CDR_ord ~ EDUC_cat,
+             family = cumulative('logitlink', parallel = F))
+mainF2<-update(mainF1, .~.+SEX)
+mainF3<-update(mainF2, .~.+DEP)
+mainF4<-update(mainF3, .~.+Marriage)
+#marriage has issues. (lol not a divorce joke)
+mainF5<-update(mainF3, .~.+RACE)
+mainF6<-update(mainF5, .~.+FEVALAGE)
+#FEVALAGE is an issue, makes sense because that's the only non-categorical so there's 
+#a lot of different lines it's trying to fit.
+mainF7<-update(mainF5, .~.+EDUC_cat:RES_PRIVATE)
+#breaks because too many lines
+mainFfinal<-update(mainF3, .~.+RACE)
+summary(mainFfinal)
+```
+
+
+```{r}
 AIC(fm)
 BIC(fm)
 
@@ -226,6 +248,10 @@ prediction = apply(prob_table, 1, which.max)
 (accuracy = sum(df$CDR == (prediction-1)*0.5)/n)
 ```
 
+
+
+
+Veera said no to the binary logistic regression.
 ```{r}
 ## accuracy for parrellal = F coding
 sm1 <- glm(data = df, s1~EDUC_cat + SEX + Marriage + DEP + FEVALAGE + 
@@ -263,19 +289,6 @@ variance covariance plot check for colinearity
 VIF(sm1)
 VIF(sm2)
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
