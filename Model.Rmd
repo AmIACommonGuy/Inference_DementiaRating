@@ -326,3 +326,68 @@ p+stat_function(fun=woman1, color="red")+
 
 
 
+## Plots
+```{r}
+##### correlation plot ######
+
+# library(ggcorrplot)
+plotdf = df[, c(2,4,6,7,10:13)]
+model.matrix(~., data=plotdf) %>% 
+  cor(use="pairwise.complete.obs") %>% 
+  ggcorrplot(show.diag = F, type="lower", lab=TRUE, lab_size=2) + labs(title = "Correlation Plot of Final Model Variables")
+# ggsave("correlation.png")
+
+
+##### plot estimates with standard errors #####
+# generate dataframe with mf output
+coefs<-data.frame(estimates = coefficients(fm),
+                  variables = names(coefficients(fm)),
+                  standard_error = sqrt(diag(vcov(fm))))
+coefs$cilow = coefs$estimates - 1.96 * coefs$standard_error
+coefs$cihigh = coefs$estimates + 1.96 * coefs$standard_error
+coefs$expcilow = exp(coefs$estimates) - 1.96 * exp(coefs$estimates) * coefs$standard_error
+coefs$expcihigh = exp(coefs$estimates) + 1.96 * exp(coefs$estimates) * coefs$standard_error
+coefs$significant = factor(c("*","***", "", "*", "", "***","***","***","***","","***","","**",".","*","**","*"))
+# library(purrr)
+coefs = coefs %>% 
+    map_df(rev)
+    
+# generate plot
+coefs %>%
+    ggplot(aes(y = forcats::fct_inorder(variables), x = estimates, group = significant, color = significant)) +
+    geom_point() +
+    # theme(axis.text.x = element_text(angle = 45)) +
+    geom_errorbar(aes(xmin = cilow, xmax = cihigh)) +
+    labs(title = "Final Model Log Proportional Odds with CI",
+       y= "Variable",
+       x= "Estimate",
+       color = "Sig Level")
+# ggsave("coefficients.png")
+
+coefs %>%
+    ggplot(aes(y = forcats::fct_inorder(variables), x = exp(estimates), group = significant, color = significant)) +
+    geom_point() +
+    # theme(axis.text.x = element_text(angle = 45)) +
+    geom_errorbar(aes(xmin = expcilow, xmax = expcihigh)) +
+    labs(title = "Final Model Proportional Odds with CI",
+       y= "Variable",
+       x= "Estimate",
+       color = "Significance Level")
+# ggsave("expcoef.png")
+
+
+### Rotated Graph -- not as pretty ###
+
+# coefs %>%
+#     ggplot(aes(x = variables, y = estimates, group = significant, color = significant)) +
+#     geom_point() +
+#     theme(axis.text.x = element_text(angle = 45)) +
+#     geom_errorbar(aes(ymin = cilow, ymax = cihigh)) +
+#     labs(title = "Final Model Estimates with Standard Errors",
+#             y= "Variable",
+#             x= "Estimate",
+#             color = "Significance Level")
+
+```
+
+
