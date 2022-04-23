@@ -237,6 +237,7 @@ mainF7<-update(mainF5, .~.+EDUC_cat:RES_PRIVATE)
 #breaks because too many lines
 mainFfinal<-update(mainF3, .~.+RACE)
 summary(mainFfinal)
+AIC(mainFfinal)
 ```
 
 ```{r}
@@ -296,3 +297,32 @@ table
 }
 kable(hl_table(df$CDR, fitted(fm)))
 ```
+
+
+
+## Graphs
+
+Woman 1: unmarried non-white woman, with quantile 3 education, with depression in a private residence
+*which intercept do we use??*
+Woman 1: unmarried non-white woman, with quantile 3 education, with depression in a private residence (intercept 1)
+Woman 2: unmarried non-white woman, with quantile 1 education, with depression in a private residence (intercept 1)
+Man1<-married white man quantile 4 education, no depression private residence
+Man2<-married white man quantile 1 education, no depression, public residence.
+
+```{r}
+woman1<-function(x){plogis(3.217459+3.039931+-1.330370-0.046109*x+1.539297-0.038704*x+1.072787)}
+woman2<-function(x){plogis(3.217459+-1.330370-0.046109*x+1.539297-0.038704*x+1.072787)}
+man1<-function(x){plogis(3.217459+-1.916881-1.023344-0.662878-0.046109*x+0.116408+1.539297-0.038704*x+1.019062)}
+man2<-function(x){plogis(3.217459+-1.023344-0.662878-0.046109*x+0.116408)}
+p<-ggplot(df, aes(x=FEVALAGE))
+
+p+stat_function(fun=woman1, color="red")+
+  stat_function(fun=woman2, color="blue")+
+  stat_function(fun=man1, color="black")+
+  stat_function(fun=man2, color="black", linetype="dashed")+
+  ggtitle("Predictive Cumulative Odds")+
+  labs(x="age", y="Probability of No or Mild Impairment")
+```
+
+
+
